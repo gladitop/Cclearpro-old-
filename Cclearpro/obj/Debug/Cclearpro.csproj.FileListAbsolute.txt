@@ -1,0 +1,42 @@
+C:\Users\Дамир\source\repos\Cclearpro\Cclearpro\bin\Debug\Cclearpro.exe.config
+C:\Users\Дамир\source\repos\Cclearpro\Cclearpro\bin\Debug\Cclearpro.exe
+C:\Users\Дамир\source\repos\Cclearpro\Cclearpro\bin\Debug\Cclearpro.pdb
+C:\Users\Дамир\source\repos\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csprojAssemblyReference.cache
+C:\Users\Дамир\source\repos\Cclearpro\Cclearpro\obj\Debug\Cclearpro.Form1.resources
+C:\Users\Дамир\source\repos\Cclearpro\Cclearpro\obj\Debug\Cclearpro.Properties.Resources.resources
+C:\Users\Дамир\source\repos\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.GenerateResource.cache
+C:\Users\Дамир\source\repos\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CoreCompileInputs.cache
+C:\Users\Дамир\source\repos\Cclearpro\Cclearpro\obj\Debug\Cclearpro.exe
+C:\Users\Дамир\source\repos\Cclearpro\Cclearpro\obj\Debug\Cclearpro.pdb
+C:\Users\Дамир Хакер\Desktop\Cclearpro\Cclearpro\bin\Debug\Cclearpro.exe.config
+C:\Users\Дамир Хакер\Desktop\Cclearpro\Cclearpro\bin\Debug\Cclearpro.exe
+C:\Users\Дамир Хакер\Desktop\Cclearpro\Cclearpro\bin\Debug\Cclearpro.pdb
+C:\Users\Дамир Хакер\Desktop\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csprojAssemblyReference.cache
+C:\Users\Дамир Хакер\Desktop\Cclearpro\Cclearpro\obj\Debug\Cclearpro.Form1.resources
+C:\Users\Дамир Хакер\Desktop\Cclearpro\Cclearpro\obj\Debug\Cclearpro.Properties.Resources.resources
+C:\Users\Дамир Хакер\Desktop\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.GenerateResource.cache
+C:\Users\Дамир Хакер\Desktop\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CoreCompileInputs.cache
+C:\Users\Дамир Хакер\Desktop\Cclearpro\Cclearpro\obj\Debug\Cclearpro.exe
+C:\Users\Дамир Хакер\Desktop\Cclearpro\Cclearpro\obj\Debug\Cclearpro.pdb
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\bin\Debug\Cclearpro.exe.config
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\bin\Debug\Cclearpro.exe
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\bin\Debug\Cclearpro.pdb
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csprojAssemblyReference.cache
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\obj\Debug\Cclearpro.Properties.Resources.resources
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.GenerateResource.cache
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CoreCompileInputs.cache
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\obj\Debug\Cclearpro.exe
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\obj\Debug\Cclearpro.pdb
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\obj\Debug\Cclearpro.login.resources
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\Cclearpro\obj\Debug\Cclearpro.main.resources
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\bin\Debug\Cclearpro.exe.config
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\bin\Debug\Cclearpro.exe
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\bin\Debug\Cclearpro.pdb
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csprojAssemblyReference.cache
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.login.resources
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.main.resources
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.Properties.Resources.resources
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.GenerateResource.cache
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CoreCompileInputs.cache
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.exe
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.pdb
