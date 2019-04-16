@@ -17,8 +17,8 @@ namespace Cclearpro
 
         //формы
 
-        main f2;
-        login f1;
+        main f2;// 2 форма то есть главная
+        login f1;// 1 форма то есть авторизация
 
         public login()
         {
@@ -102,10 +102,15 @@ namespace Cclearpro
             }
         }
 
-        //чтобы проверить переменные
-        private void Form1_Load(object sender, EventArgs e)
+        //чтобы проверить можно ли запускать авторизацию?
+        private void Login_Load(object sender, EventArgs e)
         {
-
+            if (Data.nameself == true)
+            {
+                f2 = new main();
+                f2.Show();
+                this.Hide();
+            }
         }
 
         // для закрытия анимация

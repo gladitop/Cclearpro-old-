@@ -19,9 +19,9 @@ namespace Cclearpro
         }
 
         //кнопочки
-        private void btcloses_Click(object sender, EventArgs e)//для зокрытия
+        private void btcloses_Click(object sender, EventArgs e)//для закрытия
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btminis_Click(object sender, EventArgs e)//чтобы скрыть
@@ -29,6 +29,34 @@ namespace Cclearpro
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
+        //Анимации
+
+        //для закрытия
+        private void btcloses_MouseEnter(object sender, EventArgs e)
+        {
+            btcloses.BackColor = Color.Red;
+        }
+
+        private void btcloses_MouseLeave(object sender, EventArgs e)
+        {
+            btcloses.BackColor = Color.Gray;
+        }
+
+        //для скрытия формы
+
+        private void btminis_MouseEnter(object sender, EventArgs e)
+        {
+            btminis.BackColor = Color.Red;
+        }
+
+        private void btminis_MouseLeave(object sender, EventArgs e)
+        {
+            btminis.BackColor = Color.Gray;
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            //tabControl1.TabPages.Add()
+        }
     }
 }
