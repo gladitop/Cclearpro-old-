@@ -129,10 +129,5 @@ namespace Cclearpro
         {
             btminis.BackColor = Color.Gray;
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

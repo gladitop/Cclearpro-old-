@@ -19,14 +19,16 @@ namespace Cclearpro
         }
 
         //кнопочки
-        private void btcloses_Click(object sender, EventArgs e)
+        private void btcloses_Click(object sender, EventArgs e)//для зокрытия
         {
-
+            this.Close();
         }
 
-        private void btminis_Click(object sender, EventArgs e)
+        private void btminis_Click(object sender, EventArgs e)//чтобы скрыть
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
+
+        
     }
 }
