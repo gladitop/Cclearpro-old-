@@ -13,6 +13,13 @@ namespace Cclearpro
 {
     public partial class main : Form
     {
+
+        //переменные
+
+        //формы
+
+        login f1;// 1 форма то есть авторизация
+
         public main()
         {
             InitializeComponent();
@@ -54,9 +61,18 @@ namespace Cclearpro
             btminis.BackColor = Color.Gray;
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        //При загруски формы
+        private void main_Load(object sender, EventArgs e)
         {
-            //tabControl1.TabPages.Add()
+            if (Data.name == "")
+            {
+                MessageBox.Show("Error: Нет имени", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                f1 = new login();
+                f1.Show();
+                this.Close();
+            }
+            else if (Data.name != "")
+                label1.Text = label1.Text + Data.name;
         }
     }
 }
