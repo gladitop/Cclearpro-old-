@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//что я добавил
+using System.IO;
+
 namespace Cclearpro
 {
     public partial class main : Form
@@ -19,6 +22,14 @@ namespace Cclearpro
         //формы
 
         login f1;// 1 форма то есть авторизация
+
+        //для таймеров
+
+        //Time
+
+        int c;//секунды
+        int z;//минуты
+        int x;//Часы
 
         public main()
         {
@@ -73,6 +84,51 @@ namespace Cclearpro
             }
             else if (Data.name != "")
                 label1.Text = label1.Text + Data.name;
+        }
+
+        //таймеры
+
+        //чтобы понять сколько времени работает программа
+
+        private void time_Tick(object sender, EventArgs e)
+        {
+            c++;
+            if (c == 60)
+            {
+                z++;
+                c = 0;
+            }
+            if (z == 60)
+            {
+                x++;
+                z = 0;
+            }
+            label4.Text = "Время работы программы: ";
+            label4.Text = Convert.ToString(label4.Text + c + ":" + z + ":" + x);
+        }
+
+
+        //какой-то мусоро
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Для очистки
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                //тут пока нет)))
+            }
+            else if (radioButton2.Checked == true)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start("C:\\Windows\\System32\\cleanmgr.exe");
+                }
+                catch { MessageBox.Show("Error: Нет файла под пути C: Windows System32 cleanmgr.exe или другая проблема", "Clearpro", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
         }
     }
 }
