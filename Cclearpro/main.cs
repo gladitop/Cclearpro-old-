@@ -14,6 +14,7 @@ using System.IO;
 
 namespace Cclearpro
 {
+
     public partial class main : Form
     {
 
@@ -83,7 +84,10 @@ namespace Cclearpro
                 this.Close();
             }
             else if (Data.name != "")
+            {
                 label1.Text = label1.Text + Data.name;
+                radioButton2.Checked = true; // Да мне было лень менять настройки)))
+            }
         }
 
         //таймеры
@@ -114,12 +118,18 @@ namespace Cclearpro
 
         }
 
+        //Очистка мусора
+
         //Для очистки
         private void Clear_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
-                //тут пока нет)))
+                if (checkTemp.Checked == true)
+                {
+                    cleartemp(); 
+                }
+                MessageBox.Show("Завершено!", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (radioButton2.Checked == true)
             {
@@ -129,6 +139,40 @@ namespace Cclearpro
                 }
                 catch { MessageBox.Show("Error: Нет файла под пути C: Windows System32 cleanmgr.exe или другая проблема", "Clearpro", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
+        }
+
+        //void-ы
+
+        //для очистки
+
+        //temp
+
+        public static void cleartemp()
+        {
+            try
+            {
+                //пока нет)
+            }
+            catch { MessageBox.Show("Error: clear temp", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        //загрузки
+        
+        //пока нет
+
+        //Мусорная корзина
+
+        //пока нет
+
+        //Для проверки нажата ли наш радио?
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                checkTemp.Enabled = true;
+            }
+            else { checkTemp.Enabled = false; }
         }
     }
 }

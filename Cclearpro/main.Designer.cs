@@ -39,9 +39,11 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkTemp = new System.Windows.Forms.CheckBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Clear = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -123,6 +125,7 @@
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(1, 22);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -152,6 +155,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.checkTemp);
             this.tabPage2.Controls.Add(this.radioButton2);
             this.tabPage2.Controls.Add(this.radioButton1);
             this.tabPage2.Controls.Add(this.Clear);
@@ -162,6 +166,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Проверки на мусор";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // checkTemp
+            // 
+            this.checkTemp.AutoSize = true;
+            this.checkTemp.Enabled = false;
+            this.checkTemp.Location = new System.Drawing.Point(391, 26);
+            this.checkTemp.Name = "checkTemp";
+            this.checkTemp.Size = new System.Drawing.Size(169, 17);
+            this.checkTemp.TabIndex = 3;
+            this.checkTemp.Text = "Очистка временных файлов";
+            this.checkTemp.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -186,6 +201,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Нашими средствами";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // Clear
             // 
@@ -197,6 +213,15 @@
             this.Clear.Text = "Проверить!";
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(882, 372);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Насторойки";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -257,5 +282,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.TabPage tabPage3;
+        public System.Windows.Forms.CheckBox checkTemp;
     }
 }
