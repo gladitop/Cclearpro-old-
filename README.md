@@ -124,4 +124,20 @@ P.S не думал что разработка так много времени
 
 надо обновление написать!
 
-ссылка: это сейчас такое обновление!
+ссылка: https://github.com/damiralmaev/Cclearpro/commit/518f47f63dec2bbcc2c34f981f5fe6492b85db0f
+
+10
+
+На Русском Плюсы Дизайн Дороботал проверка мусора начил доробататься …
+
+…настройки Информация Функции Добавилось сообщение вы уверны закрыть прогу? Код обнолён Настройки Информация Минусы Компы Сделана на слабом ноутбуке :( - English plus Design Finalized check garbage started tweaking settings Information of a Function was Added to the message are you sure to close the app? Code updated Settings Information of the Cons of the Components is Made on a weak laptop :( -. translation by Yandex
+
+Ссылка: https://github.com/damiralmaev/Cclearpro/commit/451e60c954e693179c3c50e7f7d604f5c6b9b117
+
+11
+
+Забыл! (Смотрите описание)
+
+Описание
+
+ссылка: это сегодня такое обновление
