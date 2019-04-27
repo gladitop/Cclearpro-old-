@@ -39,18 +39,27 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkdonl = new System.Windows.Forms.CheckBox();
+            this.checkcor = new System.Windows.Forms.CheckBox();
             this.checkTemp = new System.Windows.Forms.CheckBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Clear = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkamin = new System.Windows.Forms.CheckBox();
+            this.checkcloseself = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btminis
@@ -155,6 +164,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.checkdonl);
+            this.tabPage2.Controls.Add(this.checkcor);
             this.tabPage2.Controls.Add(this.checkTemp);
             this.tabPage2.Controls.Add(this.radioButton2);
             this.tabPage2.Controls.Add(this.radioButton1);
@@ -166,6 +177,28 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Проверки на мусор";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // checkdonl
+            // 
+            this.checkdonl.AutoSize = true;
+            this.checkdonl.Enabled = false;
+            this.checkdonl.Location = new System.Drawing.Point(391, 98);
+            this.checkdonl.Name = "checkdonl";
+            this.checkdonl.Size = new System.Drawing.Size(150, 17);
+            this.checkdonl.TabIndex = 5;
+            this.checkdonl.Text = "Очистка папки загрузок";
+            this.checkdonl.UseVisualStyleBackColor = true;
+            // 
+            // checkcor
+            // 
+            this.checkcor.AutoSize = true;
+            this.checkcor.Enabled = false;
+            this.checkcor.Location = new System.Drawing.Point(391, 61);
+            this.checkcor.Name = "checkcor";
+            this.checkcor.Size = new System.Drawing.Size(118, 17);
+            this.checkcor.TabIndex = 4;
+            this.checkcor.Text = "Очистка  корзины";
+            this.checkcor.UseVisualStyleBackColor = true;
             // 
             // checkTemp
             // 
@@ -216,12 +249,57 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(882, 372);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Насторойки";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkamin);
+            this.groupBox1.Controls.Add(this.checkcloseself);
+            this.groupBox1.Location = new System.Drawing.Point(10, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 67);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Закрытие программы";
+            // 
+            // checkamin
+            // 
+            this.checkamin.AutoSize = true;
+            this.checkamin.Checked = true;
+            this.checkamin.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkamin.Location = new System.Drawing.Point(6, 42);
+            this.checkamin.Name = "checkamin";
+            this.checkamin.Size = new System.Drawing.Size(77, 17);
+            this.checkamin.TabIndex = 1;
+            this.checkamin.Tag = "";
+            this.checkamin.Text = "Анимация";
+            this.checkamin.UseVisualStyleBackColor = true;
+            this.checkamin.CheckedChanged += new System.EventHandler(this.checkamin_CheckedChanged);
+            this.checkamin.MouseEnter += new System.EventHandler(this.checkamin_MouseEnter);
+            this.checkamin.MouseLeave += new System.EventHandler(this.checkamin_MouseLeave);
+            // 
+            // checkcloseself
+            // 
+            this.checkcloseself.AutoSize = true;
+            this.checkcloseself.Checked = true;
+            this.checkcloseself.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkcloseself.Location = new System.Drawing.Point(6, 19);
+            this.checkcloseself.Name = "checkcloseself";
+            this.checkcloseself.Size = new System.Drawing.Size(120, 17);
+            this.checkcloseself.TabIndex = 0;
+            this.checkcloseself.Tag = "";
+            this.checkcloseself.Text = "Сразу закрывать?";
+            this.checkcloseself.UseVisualStyleBackColor = true;
+            this.checkcloseself.CheckedChanged += new System.EventHandler(this.checkcloseself_CheckedChanged);
+            this.checkcloseself.MouseEnter += new System.EventHandler(this.checkcloseself_MouseEnter);
+            this.checkcloseself.MouseLeave += new System.EventHandler(this.checkcloseself_MouseLeave);
             // 
             // label4
             // 
@@ -238,17 +316,37 @@
             this.time.Interval = 1000;
             this.time.Tick += new System.EventHandler(this.time_Tick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(374, 431);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Что это такое? ";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(216, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 67);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "д";
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(891, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "main";
+            this.Tag = "ро";
             this.Text = "Cclearpro";
             this.Load += new System.EventHandler(this.main_Load);
             this.panel1.ResumeLayout(false);
@@ -260,6 +358,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,5 +385,12 @@
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.TabPage tabPage3;
         public System.Windows.Forms.CheckBox checkTemp;
+        public System.Windows.Forms.CheckBox checkcor;
+        public System.Windows.Forms.CheckBox checkdonl;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox checkcloseself;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkamin;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

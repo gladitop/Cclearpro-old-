@@ -40,7 +40,28 @@ namespace Cclearpro
         //кнопочки
         private void btcloses_Click(object sender, EventArgs e)//для закрытия
         {
-            Application.Exit();
+            if (Data.closeself == true)
+            {
+                DialogResult wat = MessageBox.Show("Вы уверены закрыть программу?", "Cclearpro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (wat == DialogResult.Yes)
+                {
+                    Application.Exit();
+                    if (Data.nameform == false)//Странно надо проверить
+                    {
+                        f1 = new login();
+                        f1.Close();
+                    }
+                }
+                else if (wat == DialogResult.No)
+                {
+                    //Можно что-то сделать.
+                    //Например пасхалку :)
+                }
+            }
+            else if (Data.closeself == false)
+            {
+                Application.Exit();
+            }
         }
 
         private void btminis_Click(object sender, EventArgs e)//чтобы скрыть
@@ -53,24 +74,52 @@ namespace Cclearpro
         //для закрытия
         private void btcloses_MouseEnter(object sender, EventArgs e)
         {
-            btcloses.BackColor = Color.Red;
+            if (Data.amin == true)
+            {
+                btcloses.BackColor = Color.Red;
+            }
+            else if (Data.amin == false)
+            {
+
+            }
         }
 
         private void btcloses_MouseLeave(object sender, EventArgs e)
         {
-            btcloses.BackColor = Color.Gray;
+            if (Data.amin == true)
+            {
+                btcloses.BackColor = Color.Gray;
+            }
+            else if (Data.amin == false)
+            {
+
+            }
         }
 
         //для скрытия формы
 
         private void btminis_MouseEnter(object sender, EventArgs e)
         {
-            btminis.BackColor = Color.Red;
+            if (Data.amin == true)
+            {
+                btminis.BackColor = Color.Red;
+            }
+            else if (Data.amin == false)
+            {
+
+            }
         }
 
         private void btminis_MouseLeave(object sender, EventArgs e)
         {
-            btminis.BackColor = Color.Gray;
+            if (Data.amin == true)
+            {
+                btminis.BackColor = Color.Gray;
+            }
+            else if (Data.amin == false)
+            {
+
+            }
         }
 
         //При загруски формы
@@ -127,7 +176,7 @@ namespace Cclearpro
             {
                 if (checkTemp.Checked == true)
                 {
-                    cleartemp(); 
+                    cleartemp();
                 }
                 MessageBox.Show("Завершено!", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -157,7 +206,7 @@ namespace Cclearpro
         }
 
         //загрузки
-        
+
         //пока нет
 
         //Мусорная корзина
@@ -171,8 +220,93 @@ namespace Cclearpro
             if (radioButton1.Checked == true)
             {
                 checkTemp.Enabled = true;
+                checkcor.Enabled = true;
+                checkdonl.Enabled = true;
             }
-            else { checkTemp.Enabled = false; }
+            else
+            {
+                checkTemp.Enabled = false;
+                checkcor.Enabled = false;
+                checkdonl.Enabled = false;
+            }
+            if (radioButton1.Checked == true)
+            {
+                checkTemp.Enabled = true;
+                checkcor.Enabled = true;
+                checkdonl.Enabled = true;
+            }
+            else
+            {
+                checkTemp.Enabled = false;
+            }
+            if (radioButton1.Checked == true)
+            {
+                checkTemp.Enabled = true;
+                checkcor.Enabled = true;
+                checkdonl.Enabled = true;
+            }
+            else
+            {
+                checkTemp.Enabled = false;
+                checkcor.Enabled = false;
+                checkdonl.Enabled = false;
+            }
+        }
+
+        //настройки
+
+        //Когда закрывается прога
+
+        private void checkcloseself_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkcloseself.Checked == true)
+            {
+                Data.closeself = true;
+            }
+            else if (checkcloseself.Checked == false)
+            {
+                Data.closeself = false;
+            }
+        }
+
+        //информация
+
+        private void checkcloseself_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это чтобы показывалось подвержедение чтобы закрыть прогу";
+        }
+
+        private void checkcloseself_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;
+        }
+
+        //Анимация
+
+        private void checkamin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkamin.Checked == true)
+            {
+                Data.amin = true;
+            }
+            else if (checkamin.Checked == false)
+            {
+                Data.amin = false;
+            }
+        }
+
+        //Информация
+
+        private void checkamin_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это чтобы показывалось анимацию кнопок";
+        }
+
+        private void checkamin_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;
         }
     }
 }
