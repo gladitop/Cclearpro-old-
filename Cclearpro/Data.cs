@@ -20,7 +20,6 @@ namespace Cclearpro
         public static bool closeself = true;//что выводить сообщение вы уверены что хотите это закрыть
         public static bool amin = true;//Анимация чтобы при навидение кнопки закрыть было красной
         public static bool infoself = true;//параметр показывать инфо?
-        public static bool i = true;//испроваляет баг 
 
         //Информация
 

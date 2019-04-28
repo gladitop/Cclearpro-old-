@@ -46,20 +46,27 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Clear = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btsavename = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btoproggm = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checktime = new System.Windows.Forms.CheckBox();
+            this.checkinfoleft = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkamin = new System.Windows.Forms.CheckBox();
             this.checkcloseself = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.checkinfoleft = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -253,6 +260,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.btoproggm);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
@@ -262,8 +271,58 @@
             this.tabPage3.Text = "Насторойки";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btsavename);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Location = new System.Drawing.Point(216, 13);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 140);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Смена имени";
+            // 
+            // btsavename
+            // 
+            this.btsavename.Location = new System.Drawing.Point(63, 98);
+            this.btsavename.Name = "btsavename";
+            this.btsavename.Size = new System.Drawing.Size(75, 23);
+            this.btsavename.TabIndex = 2;
+            this.btsavename.Text = "Запомнить";
+            this.btsavename.UseVisualStyleBackColor = true;
+            this.btsavename.Click += new System.EventHandler(this.btsavename_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(68, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "ваше имя";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(19, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(164, 29);
+            this.textBox1.TabIndex = 0;
+            // 
+            // btoproggm
+            // 
+            this.btoproggm.Location = new System.Drawing.Point(798, 346);
+            this.btoproggm.Name = "btoproggm";
+            this.btoproggm.Size = new System.Drawing.Size(84, 23);
+            this.btoproggm.TabIndex = 2;
+            this.btoproggm.Text = "О программе";
+            this.btoproggm.UseVisualStyleBackColor = true;
+            this.btoproggm.Click += new System.EventHandler(this.btoproggm_Click);
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checktime);
             this.groupBox2.Controls.Add(this.checkinfoleft);
             this.groupBox2.Location = new System.Drawing.Point(10, 86);
             this.groupBox2.Name = "groupBox2";
@@ -271,6 +330,38 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Информация";
+            // 
+            // checktime
+            // 
+            this.checktime.AutoSize = true;
+            this.checktime.Checked = true;
+            this.checktime.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checktime.Location = new System.Drawing.Point(6, 42);
+            this.checktime.Name = "checktime";
+            this.checktime.Size = new System.Drawing.Size(124, 17);
+            this.checktime.TabIndex = 3;
+            this.checktime.Tag = "";
+            this.checktime.Text = "Показывать время";
+            this.checktime.UseVisualStyleBackColor = true;
+            this.checktime.CheckedChanged += new System.EventHandler(this.checktime_CheckedChanged);
+            this.checktime.MouseEnter += new System.EventHandler(this.checktime_MouseEnter);
+            this.checktime.MouseLeave += new System.EventHandler(this.checktime_MouseLeave);
+            // 
+            // checkinfoleft
+            // 
+            this.checkinfoleft.AutoSize = true;
+            this.checkinfoleft.Checked = true;
+            this.checkinfoleft.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkinfoleft.Location = new System.Drawing.Point(6, 19);
+            this.checkinfoleft.Name = "checkinfoleft";
+            this.checkinfoleft.Size = new System.Drawing.Size(128, 17);
+            this.checkinfoleft.TabIndex = 2;
+            this.checkinfoleft.Tag = "";
+            this.checkinfoleft.Text = "Показывать что это";
+            this.checkinfoleft.UseVisualStyleBackColor = true;
+            this.checkinfoleft.CheckedChanged += new System.EventHandler(this.checkinfoleft_CheckedChanged);
+            this.checkinfoleft.MouseEnter += new System.EventHandler(this.checkinfoleft_MouseEnter);
+            this.checkinfoleft.MouseLeave += new System.EventHandler(this.checkinfoleft_MouseLeave);
             // 
             // groupBox1
             // 
@@ -339,20 +430,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Что это такое? ";
             // 
-            // checkinfoleft
-            // 
-            this.checkinfoleft.AutoSize = true;
-            this.checkinfoleft.Checked = true;
-            this.checkinfoleft.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkinfoleft.Location = new System.Drawing.Point(6, 19);
-            this.checkinfoleft.Name = "checkinfoleft";
-            this.checkinfoleft.Size = new System.Drawing.Size(89, 17);
-            this.checkinfoleft.TabIndex = 2;
-            this.checkinfoleft.Tag = "";
-            this.checkinfoleft.Text = "Показывать";
-            this.checkinfoleft.UseVisualStyleBackColor = true;
-            this.checkinfoleft.CheckedChanged += new System.EventHandler(this.checkinfoleft_CheckedChanged);
-            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,6 +455,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -414,5 +493,11 @@
         private System.Windows.Forms.CheckBox checkamin;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox checkinfoleft;
+        private System.Windows.Forms.CheckBox checktime;
+        private System.Windows.Forms.Button btoproggm;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btsavename;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

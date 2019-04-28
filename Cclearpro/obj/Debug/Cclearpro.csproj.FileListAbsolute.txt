@@ -51,3 +51,4 @@ C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cc
 C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CoreCompileInputs.cache
 C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.exe
 C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.pdb
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.AboutBox1.resources

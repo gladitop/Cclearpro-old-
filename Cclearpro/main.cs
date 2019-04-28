@@ -23,6 +23,7 @@ namespace Cclearpro
         //формы
 
         login f1;// 1 форма то есть авторизация
+        AboutBox1 f3;// 2 форма
 
         //для таймеров
 
@@ -161,26 +162,6 @@ namespace Cclearpro
             }
             label4.Text = "Время работы программы: ";
             label4.Text = Convert.ToString(label4.Text + c + ":" + z + ":" + x);
-
-            //инфо
-
-            if (Data.closeself == false)
-            {
-                if (Data.i == true)
-                {
-                    label5.Text = "";
-                    Data.i = false;
-                }
-            }
-            else if (Data.closeself == true)
-            {
-                if (Data.i == false)
-                {
-                    label5.Show();
-                    label5.Text = Data.info;
-                    Data.i = true;
-                }
-            }
         }
 
 
@@ -296,17 +277,13 @@ namespace Cclearpro
 
         private void checkcloseself_MouseEnter(object sender, EventArgs e)
         {
-            if (Data.infoself == true)
-            {
-                label5.Text = Data.info;//Исправляет баг
-                label5.Text = label5.Text + "Это чтобы показывалось подвержедение чтобы закрыть прогу";
-            }
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это чтобы показывалось подвержедение чтобы закрыть прогу";
         }
 
         private void checkcloseself_MouseLeave(object sender, EventArgs e)
         {
-            if (Data.infoself == true)
-                label5.Text = Data.info;
+            label5.Text = Data.info;
         }
 
         //Анимация
@@ -327,17 +304,13 @@ namespace Cclearpro
 
         private void checkamin_MouseEnter(object sender, EventArgs e)
         {
-            if (Data.infoself == true)
-            {
-                label5.Text = Data.info;//Исправляет баг
-                label5.Text = label5.Text + "Это чтобы показывалось анимацию кнопок";
-            }
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это чтобы показывалось анимацию кнопок";
         }
 
         private void checkamin_MouseLeave(object sender, EventArgs e)
         {
-            if (Data.infoself == true)
-                label5.Text = Data.info;
+            label5.Text = Data.info;
         }
 
         //текст которое показывает ваше имя
@@ -346,17 +319,13 @@ namespace Cclearpro
 
         private void label1_MouseEnter(object sender, EventArgs e)
         {
-            if (Data.infoself == true)
-            {
-                label5.Text = Data.info;//Исправляет баг
-                label5.Text = label5.Text + "Это чтобы показывалось ваше имя";
-            }
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это чтобы показывалось ваше имя";
         }
 
         private void label1_MouseLeave(object sender, EventArgs e)
         {
-            if (Data.infoself == true)
-                label5.Text = Data.info;
+            label5.Text = Data.info;
         }
 
 
@@ -366,11 +335,71 @@ namespace Cclearpro
         {
             if (checkinfoleft.Checked == true)
             {
-                Data.infoself = true;
+                label5.Visible = true;
             }
             else if (checkinfoleft.Checked == false)
             {
-                Data.closeself = false;
+                label5.Visible = false;
+            }
+        }
+
+        //Информация
+
+        private void checkinfoleft_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это чтобы показывало информацию";
+        }
+
+        private void checkinfoleft_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;
+        }
+
+        //Чтобы показывало время
+
+        private void checktime_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checktime.Checked == true)
+            {
+                label4.Visible = true;
+            }
+            else if (checktime.Checked == false)
+            {
+                label4.Visible = false;
+            }
+        }
+
+        //анимация
+
+        private void checktime_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это чтобы показывало время";
+        }
+
+        private void checktime_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;
+        }
+
+        private void btoproggm_Click(object sender, EventArgs e)
+        {
+            f3 = new AboutBox1();
+            f3.Show();
+        }
+
+        private void btsavename_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            { 
+                MessageBox.Show("Напишите ваше имя", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text != "")
+            {
+                Data.name = "Здрайствуй " + textBox1.Text;
+                label1.Text =  Data.name;
+                MessageBox.Show("Сохранено!", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
