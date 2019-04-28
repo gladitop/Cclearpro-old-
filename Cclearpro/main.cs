@@ -383,6 +383,8 @@ namespace Cclearpro
             label5.Text = Data.info;
         }
 
+        //О программе
+
         private void btoproggm_Click(object sender, EventArgs e)
         {
             f3 = new AboutBox1();
@@ -392,14 +394,70 @@ namespace Cclearpro
         private void btsavename_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "")
-            { 
+            {
                 MessageBox.Show("Напишите ваше имя", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textBox1.Text.Length >= 9)
+            {
+                MessageBox.Show("Небольше 8!", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Text = "";
             }
             else if (textBox1.Text != "")
             {
                 Data.name = "Здрайствуй " + textBox1.Text;
-                label1.Text =  Data.name;
+                label1.Text = Data.name;
                 MessageBox.Show("Сохранено!", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        //сброс
+
+        private void btsppoll_Click(object sender, EventArgs e)
+        {
+            DialogResult lol = MessageBox.Show("Вы уверены? Все ваши настройки будут удалены!", "Cclearpro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (lol == DialogResult.Yes)
+            {
+
+                //переменные
+
+                Data.name = "";
+                Data.amin = true;
+                Data.closeself = true;
+                Data.nameself = false;
+                Data.amin = true;
+                Data.infoself = true;
+                Data.info = "Что это такое? ";
+                Data.nameform = false;
+
+                //сброс обьектов
+
+                checkcloseself.Checked = true;
+                checkamin.Checked = true;
+                checkinfoleft.Checked = true;
+                checktime.Checked = true;
+
+                //начинаем сброс имени ;)
+
+                f1 = new login();
+                f1.Show();
+                this.Close();
+            }
+            else if (lol == DialogResult.No)
+            {
+
+            }
+        }
+
+        //Быстрые клавиши или горячии клавиши
+
+        private void main_KeyPress(object sender, KeyPressEventArgs e)
+        {
+             string key = e.KeyChar.ToString();
+
+            if (key == "F1")
+            {
+                f3 = new AboutBox1();
+                f3.Show();
             }
         }
     }

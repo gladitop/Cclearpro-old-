@@ -60,6 +60,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
+            this.btsppoll = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -144,6 +146,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(1, 22);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -260,6 +263,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btsppoll);
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Controls.Add(this.btoproggm);
             this.tabPage3.Controls.Add(this.groupBox2);
@@ -430,6 +434,27 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Что это такое? ";
             // 
+            // btsppoll
+            // 
+            this.btsppoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btsppoll.ForeColor = System.Drawing.Color.Red;
+            this.btsppoll.Location = new System.Drawing.Point(687, 346);
+            this.btsppoll.Name = "btsppoll";
+            this.btsppoll.Size = new System.Drawing.Size(105, 23);
+            this.btsppoll.TabIndex = 3;
+            this.btsppoll.Text = "Полный сброс";
+            this.btsppoll.UseVisualStyleBackColor = true;
+            this.btsppoll.Click += new System.EventHandler(this.btsppoll_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(882, 321);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Ускорение системы";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,5 +524,7 @@
         private System.Windows.Forms.Button btsavename;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btsppoll;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }

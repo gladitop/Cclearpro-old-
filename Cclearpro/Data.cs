@@ -21,6 +21,10 @@ namespace Cclearpro
         public static bool amin = true;//Анимация чтобы при навидение кнопки закрыть было красной
         public static bool infoself = true;//параметр показывать инфо?
 
+        //Напинималки ;)
+
+        //короче надо написать переменные в сброс
+
         //Информация
 
         public static string info = "Что это такое? ";//Исправляет баг

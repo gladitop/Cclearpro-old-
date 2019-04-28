@@ -113,7 +113,7 @@
             this.btsavename.Name = "btsavename";
             this.btsavename.Size = new System.Drawing.Size(203, 57);
             this.btsavename.TabIndex = 4;
-            this.btsavename.Text = "Вход";
+            this.btsavename.Text = "Выход";
             this.btsavename.UseVisualStyleBackColor = false;
             this.btsavename.Click += new System.EventHandler(this.btsavename_Click);
             // 
