@@ -76,7 +76,7 @@ namespace Cclearpro
         //чтобы переменная name нормальна сохранилась!
         private void btsavename_Click(object sender, EventArgs e)
         {
-            if (Data.name == "")
+            if ((tbname.Text == ""))
             {
                 MessageBox.Show("Пожалуйста напишите ваше имя", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -46,19 +46,21 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Clear = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkamin = new System.Windows.Forms.CheckBox();
             this.checkcloseself = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkinfoleft = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,6 +163,8 @@
             this.label1.Size = new System.Drawing.Size(398, 73);
             this.label1.TabIndex = 0;
             this.label1.Text = "Здрайствуй ";
+            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // tabPage2
             // 
@@ -214,6 +218,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton2.Location = new System.Drawing.Point(25, 173);
             this.radioButton2.Name = "radioButton2";
@@ -231,7 +236,6 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(314, 37);
             this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Нашими средствами";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
@@ -257,6 +261,16 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Насторойки";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.checkinfoleft);
+            this.groupBox2.Location = new System.Drawing.Point(10, 86);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 67);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Информация";
             // 
             // groupBox1
             // 
@@ -325,14 +339,19 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Что это такое? ";
             // 
-            // groupBox2
+            // checkinfoleft
             // 
-            this.groupBox2.Location = new System.Drawing.Point(216, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 67);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "д";
+            this.checkinfoleft.AutoSize = true;
+            this.checkinfoleft.Checked = true;
+            this.checkinfoleft.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkinfoleft.Location = new System.Drawing.Point(6, 19);
+            this.checkinfoleft.Name = "checkinfoleft";
+            this.checkinfoleft.Size = new System.Drawing.Size(89, 17);
+            this.checkinfoleft.TabIndex = 2;
+            this.checkinfoleft.Tag = "";
+            this.checkinfoleft.Text = "Показывать";
+            this.checkinfoleft.UseVisualStyleBackColor = true;
+            this.checkinfoleft.CheckedChanged += new System.EventHandler(this.checkinfoleft_CheckedChanged);
             // 
             // main
             // 
@@ -359,6 +378,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -392,5 +413,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkamin;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox checkinfoleft;
     }
 }

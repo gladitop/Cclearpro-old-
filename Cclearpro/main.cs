@@ -145,6 +145,9 @@ namespace Cclearpro
 
         private void time_Tick(object sender, EventArgs e)
         {
+
+            //время
+
             c++;
             if (c == 60)
             {
@@ -158,6 +161,26 @@ namespace Cclearpro
             }
             label4.Text = "Время работы программы: ";
             label4.Text = Convert.ToString(label4.Text + c + ":" + z + ":" + x);
+
+            //инфо
+
+            if (Data.closeself == false)
+            {
+                if (Data.i == true)
+                {
+                    label5.Text = "";
+                    Data.i = false;
+                }
+            }
+            else if (Data.closeself == true)
+            {
+                if (Data.i == false)
+                {
+                    label5.Show();
+                    label5.Text = Data.info;
+                    Data.i = true;
+                }
+            }
         }
 
 
@@ -273,13 +296,17 @@ namespace Cclearpro
 
         private void checkcloseself_MouseEnter(object sender, EventArgs e)
         {
-            label5.Text = Data.info;//Исправляет баг
-            label5.Text = label5.Text + "Это чтобы показывалось подвержедение чтобы закрыть прогу";
+            if (Data.infoself == true)
+            {
+                label5.Text = Data.info;//Исправляет баг
+                label5.Text = label5.Text + "Это чтобы показывалось подвержедение чтобы закрыть прогу";
+            }
         }
 
         private void checkcloseself_MouseLeave(object sender, EventArgs e)
         {
-            label5.Text = Data.info;
+            if (Data.infoself == true)
+                label5.Text = Data.info;
         }
 
         //Анимация
@@ -300,13 +327,51 @@ namespace Cclearpro
 
         private void checkamin_MouseEnter(object sender, EventArgs e)
         {
-            label5.Text = Data.info;//Исправляет баг
-            label5.Text = label5.Text + "Это чтобы показывалось анимацию кнопок";
+            if (Data.infoself == true)
+            {
+                label5.Text = Data.info;//Исправляет баг
+                label5.Text = label5.Text + "Это чтобы показывалось анимацию кнопок";
+            }
         }
 
         private void checkamin_MouseLeave(object sender, EventArgs e)
         {
-            label5.Text = Data.info;
+            if (Data.infoself == true)
+                label5.Text = Data.info;
+        }
+
+        //текст которое показывает ваше имя
+
+        //Информация
+
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+            if (Data.infoself == true)
+            {
+                label5.Text = Data.info;//Исправляет баг
+                label5.Text = label5.Text + "Это чтобы показывалось ваше имя";
+            }
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            if (Data.infoself == true)
+                label5.Text = Data.info;
+        }
+
+
+        //чтобы инфу показывала
+
+        private void checkinfoleft_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkinfoleft.Checked == true)
+            {
+                Data.infoself = true;
+            }
+            else if (checkinfoleft.Checked == false)
+            {
+                Data.closeself = false;
+            }
         }
     }
 }
