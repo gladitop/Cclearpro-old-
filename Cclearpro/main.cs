@@ -456,9 +456,64 @@ namespace Cclearpro
 
             if (key == "F1")
             {
-                f3 = new AboutBox1();
+                f3 = new AboutBox1();//не работает :(((
                 f3.Show();
             }
+        }
+
+        //Информация снова
+
+        //Для очистки
+
+        //кнопка для очистки
+
+        private void Clear_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это чтобы очистить ваш компьютер";
+        }
+
+        private void Clear_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;
+        }
+
+        //радио для очистки "Средствами Windows"
+
+        private void radioButton2_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это чтобы Windows чистил";
+        }
+
+        private void radioButton2_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;
+        }
+
+        //Опять сбросы
+
+        private void postime_Click(object sender, EventArgs e)
+        {
+
+
+            //остановка кофликтов
+
+            time.Enabled = false;
+
+            //переменные
+
+            c = 0;
+            z = 0;
+            x = 0;
+
+            //Сброс обьектов
+
+            label1.Text = "Время работы программы: ";
+
+            //старт кофликтов :)
+
+            time.Enabled = true;
         }
     }
 }

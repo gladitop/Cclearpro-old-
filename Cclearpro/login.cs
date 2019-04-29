@@ -162,5 +162,89 @@ namespace Cclearpro
 
             }
         }
+
+        //рандомное имя
+
+        private void btrandomname_Click(object sender, EventArgs e)
+        {
+            //медот для рандома
+            Random rad = new Random();
+
+            //в переменную водим
+            Data.namerand = Convert.ToString(rad.Next(1, 10));
+
+            //пишём именя
+            if (Data.namerand == "1")
+            {
+                Data.namerand = "Gladi";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+            else if (Data.namerand == "2")
+            {
+                Data.namerand = "Gladi0To";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+            else if (Data.namerand == "3")
+            {
+                Data.namerand = "Gladi0To";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+            else if (Data.namerand == "4")
+            {
+                Data.namerand = "ToYarr";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+            else if (Data.namerand == "5")
+            {
+                Data.namerand = "Yarr";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+            else if (Data.namerand == "6")
+            {
+                Data.namerand = "Over";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+            else if (Data.namerand == "7")
+            {
+                Data.namerand = "ToOver";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+            else if (Data.namerand == "8")
+            {
+                Data.namerand = "Kakyss";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+            else if (Data.namerand == "9")
+            {
+                Data.namerand = "ToKakyss";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+
+            }
+            else if (Data.namerand == "10")
+            {
+                Data.namerand = "ToTop";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+        }
     }
 }

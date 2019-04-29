@@ -29,6 +29,12 @@ namespace Cclearpro
 
         public static string info = "Что это такое? ";//Исправляет баг
 
+        //разное
+
+        //для рандомное
+
+        public static string namerand = "";
+
         //нужна перезагруска
 
         public static bool nameform = false;//проверяет что и как запускать!

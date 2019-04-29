@@ -36,6 +36,7 @@
             this.lbname = new System.Windows.Forms.Label();
             this.tbname = new System.Windows.Forms.TextBox();
             this.btsavename = new System.Windows.Forms.Button();
+            this.btrandomname = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -117,12 +118,25 @@
             this.btsavename.UseVisualStyleBackColor = false;
             this.btsavename.Click += new System.EventHandler(this.btsavename_Click);
             // 
+            // btrandomname
+            // 
+            this.btrandomname.BackColor = System.Drawing.Color.DimGray;
+            this.btrandomname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btrandomname.Location = new System.Drawing.Point(672, 402);
+            this.btrandomname.Name = "btrandomname";
+            this.btrandomname.Size = new System.Drawing.Size(116, 36);
+            this.btrandomname.TabIndex = 5;
+            this.btrandomname.Text = "рандомное имя";
+            this.btrandomname.UseVisualStyleBackColor = false;
+            this.btrandomname.Click += new System.EventHandler(this.btrandomname_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btrandomname);
             this.Controls.Add(this.btsavename);
             this.Controls.Add(this.tbname);
             this.Controls.Add(this.lbname);
@@ -149,6 +163,7 @@
         private System.Windows.Forms.Label lbname;
         private System.Windows.Forms.TextBox tbname;
         private System.Windows.Forms.Button btsavename;
+        public System.Windows.Forms.Button btrandomname;
     }
 }
 
