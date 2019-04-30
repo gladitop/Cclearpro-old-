@@ -428,6 +428,7 @@ namespace Cclearpro
                 Data.infoself = true;
                 Data.info = "Что это такое? ";
                 Data.nameform = false;
+                Data.colorbed = "DimGray";
 
                 //сброс обьектов
 
@@ -435,6 +436,12 @@ namespace Cclearpro
                 checkamin.Checked = true;
                 checkinfoleft.Checked = true;
                 checktime.Checked = true;
+                tabPage5.BackColor = Color.DimGray;
+                tabPage4.BackColor = Color.DimGray;
+                tabPage3.BackColor = Color.DimGray;
+                tabPage2.BackColor = Color.DimGray;
+                tabPage1.BackColor = Color.DimGray;
+                comboBox1.Text = "DimGray";
 
                 //начинаем сброс имени ;)
 
@@ -531,6 +538,7 @@ namespace Cclearpro
             Data.infoself = true;
             Data.info = "Что это такое? ";
             Data.nameform = false;
+            Data.colorbed = "DimGray";
 
             //сброс обьектов
 
@@ -538,6 +546,60 @@ namespace Cclearpro
             checkamin.Checked = true;
             checkinfoleft.Checked = true;
             checktime.Checked = true;
+            tabPage5.BackColor = Color.DimGray;
+            tabPage4.BackColor = Color.DimGray;
+            tabPage3.BackColor = Color.DimGray;
+            tabPage2.BackColor = Color.DimGray;
+            tabPage1.BackColor = Color.DimGray;
+            comboBox1.Text = "DimGray";
         }
+
+        //Опять настройки )))))))))
+
+        //для смена заднего цвета плотформы
+
+        private void btsacecolor_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "DimGray")
+            {
+                tabPage5.BackColor = Color.DimGray;
+                tabPage4.BackColor = Color.DimGray;
+                tabPage3.BackColor = Color.DimGray;
+                tabPage2.BackColor = Color.DimGray;
+                tabPage1.BackColor = Color.DimGray;
+                Data.colorbed = "DimGray";
+            }
+            else if (comboBox1.Text == "Gray")
+            {
+                tabPage5.BackColor = Color.Gray;
+                tabPage4.BackColor = Color.Gray;
+                tabPage3.BackColor = Color.Gray;
+                tabPage2.BackColor = Color.Gray;
+                tabPage1.BackColor = Color.Gray;
+                Data.colorbed = "Gray";
+            }
+            else if (comboBox1.Text == "White")
+            {
+                tabPage5.BackColor = Color.White;
+                tabPage4.BackColor = Color.White;
+                tabPage3.BackColor = Color.White;
+                tabPage2.BackColor = Color.White;
+                tabPage1.BackColor = Color.White;
+                Data.colorbed = "White";
+            }
+            else
+            {
+                MessageBox.Show("Ошибка", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //мусор
+        
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //мусор
     }
 }

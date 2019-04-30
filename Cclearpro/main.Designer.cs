@@ -46,9 +46,11 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Clear = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btoproggm = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.postparametr = new System.Windows.Forms.Button();
             this.postime = new System.Windows.Forms.Button();
             this.btsppoll = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -68,14 +70,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.postparametr = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btsacecolor = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -172,7 +175,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(882, 372);
+            this.tabPage1.Size = new System.Drawing.Size(882, 377);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Основное";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -201,7 +204,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(882, 372);
+            this.tabPage2.Size = new System.Drawing.Size(882, 377);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Проверки на мусор";
             // 
@@ -292,6 +295,18 @@
             this.tabPage3.Size = new System.Drawing.Size(882, 377);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Насторойки";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btsacecolor);
+            this.groupBox6.Controls.Add(this.comboBox1);
+            this.groupBox6.Location = new System.Drawing.Point(216, 159);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(200, 124);
+            this.groupBox6.TabIndex = 6;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Изменение фона";
             // 
             // groupBox5
             // 
@@ -324,6 +339,18 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Сбросы";
+            // 
+            // postparametr
+            // 
+            this.postparametr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.postparametr.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.postparametr.Location = new System.Drawing.Point(31, 55);
+            this.postparametr.Name = "postparametr";
+            this.postparametr.Size = new System.Drawing.Size(130, 23);
+            this.postparametr.TabIndex = 5;
+            this.postparametr.Text = "Сброс параметров";
+            this.postparametr.UseVisualStyleBackColor = true;
+            this.postparametr.Click += new System.EventHandler(this.postparametr_Click);
             // 
             // postime
             // 
@@ -479,7 +506,7 @@
             this.tabPage4.BackColor = System.Drawing.Color.DimGray;
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(882, 372);
+            this.tabPage4.Size = new System.Drawing.Size(882, 377);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Ускорение системы";
             // 
@@ -490,7 +517,7 @@
             this.tabPage5.Controls.Add(this.groupBox9);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(882, 372);
+            this.tabPage5.Size = new System.Drawing.Size(882, 377);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Выстоновление файлов";
             // 
@@ -536,26 +563,28 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Что это такое? ";
             // 
-            // postparametr
+            // comboBox1
             // 
-            this.postparametr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.postparametr.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.postparametr.Location = new System.Drawing.Point(31, 55);
-            this.postparametr.Name = "postparametr";
-            this.postparametr.Size = new System.Drawing.Size(130, 23);
-            this.postparametr.TabIndex = 5;
-            this.postparametr.Text = "Сброс параметров";
-            this.postparametr.UseVisualStyleBackColor = true;
-            this.postparametr.Click += new System.EventHandler(this.postparametr_Click);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "DimGray",
+            "Gray",
+            "White"});
+            this.comboBox1.Location = new System.Drawing.Point(41, 41);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "DimGray";
             // 
-            // groupBox6
+            // btsacecolor
             // 
-            this.groupBox6.Location = new System.Drawing.Point(216, 159);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(200, 124);
-            this.groupBox6.TabIndex = 6;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Изменение фона";
+            this.btsacecolor.Location = new System.Drawing.Point(63, 82);
+            this.btsacecolor.Name = "btsacecolor";
+            this.btsacecolor.Size = new System.Drawing.Size(75, 23);
+            this.btsacecolor.TabIndex = 1;
+            this.btsacecolor.Text = "Выбрать";
+            this.btsacecolor.UseVisualStyleBackColor = true;
+            this.btsacecolor.Click += new System.EventHandler(this.btsacecolor_Click);
             // 
             // main
             // 
@@ -582,6 +611,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -639,5 +669,7 @@
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button postparametr;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button btsacecolor;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

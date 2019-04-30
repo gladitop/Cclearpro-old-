@@ -245,6 +245,13 @@ namespace Cclearpro
                 tbname.Text = Data.namerand;
                 btsavename.PerformClick();
             }
+            else if (Data.namerand == "11")
+            {
+                Data.namerand = "Mip";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
         }
     }
 }
