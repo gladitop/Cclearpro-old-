@@ -46,12 +46,15 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Clear = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btoproggm = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.postime = new System.Windows.Forms.Button();
             this.btsppoll = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btsavename = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btoproggm = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checktime = new System.Windows.Forms.CheckBox();
             this.checkinfoleft = new System.Windows.Forms.CheckBox();
@@ -59,26 +62,25 @@
             this.checkamin = new System.Windows.Forms.CheckBox();
             this.checkcloseself = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.time = new System.Windows.Forms.Timer(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.postime = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.time = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.postparametr = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,11 +162,12 @@
             this.tabControl1.Location = new System.Drawing.Point(1, 22);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(890, 401);
+            this.tabControl1.Size = new System.Drawing.Size(890, 406);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.DimGray;
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
@@ -188,6 +191,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
             this.tabPage2.Controls.Add(this.checkdonl);
             this.tabPage2.Controls.Add(this.checkcor);
             this.tabPage2.Controls.Add(this.checkTemp);
@@ -200,7 +204,6 @@
             this.tabPage2.Size = new System.Drawing.Size(882, 372);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Проверки на мусор";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // checkdonl
             // 
@@ -277,6 +280,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Controls.Add(this.groupBox3);
@@ -284,16 +289,59 @@
             this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(882, 372);
+            this.tabPage3.Size = new System.Drawing.Size(882, 377);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Насторойки";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btoproggm);
+            this.groupBox5.Location = new System.Drawing.Point(422, 13);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(200, 85);
+            this.groupBox5.TabIndex = 5;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Информация";
+            // 
+            // btoproggm
+            // 
+            this.btoproggm.Location = new System.Drawing.Point(60, 36);
+            this.btoproggm.Name = "btoproggm";
+            this.btoproggm.Size = new System.Drawing.Size(84, 23);
+            this.btoproggm.TabIndex = 2;
+            this.btoproggm.Text = "О программе";
+            this.btoproggm.UseVisualStyleBackColor = true;
+            this.btoproggm.Click += new System.EventHandler(this.btoproggm_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.postparametr);
+            this.groupBox4.Controls.Add(this.postime);
+            this.groupBox4.Controls.Add(this.btsppoll);
+            this.groupBox4.Location = new System.Drawing.Point(10, 159);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 124);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Сбросы";
+            // 
+            // postime
+            // 
+            this.postime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.postime.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.postime.Location = new System.Drawing.Point(39, 18);
+            this.postime.Name = "postime";
+            this.postime.Size = new System.Drawing.Size(115, 23);
+            this.postime.TabIndex = 4;
+            this.postime.Text = "Сброс времени";
+            this.postime.UseVisualStyleBackColor = true;
+            this.postime.Click += new System.EventHandler(this.postime_Click);
             // 
             // btsppoll
             // 
             this.btsppoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btsppoll.ForeColor = System.Drawing.Color.Red;
-            this.btsppoll.Location = new System.Drawing.Point(43, 53);
+            this.btsppoll.Location = new System.Drawing.Point(43, 92);
             this.btsppoll.Name = "btsppoll";
             this.btsppoll.Size = new System.Drawing.Size(105, 23);
             this.btsppoll.TabIndex = 3;
@@ -339,16 +387,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(164, 29);
             this.textBox1.TabIndex = 0;
-            // 
-            // btoproggm
-            // 
-            this.btoproggm.Location = new System.Drawing.Point(60, 36);
-            this.btoproggm.Name = "btoproggm";
-            this.btoproggm.Size = new System.Drawing.Size(84, 23);
-            this.btoproggm.TabIndex = 2;
-            this.btoproggm.Text = "О программе";
-            this.btoproggm.UseVisualStyleBackColor = true;
-            this.btoproggm.Click += new System.EventHandler(this.btoproggm_Click);
             // 
             // groupBox2
             // 
@@ -438,12 +476,41 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.DimGray;
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(882, 372);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Ускорение системы";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage5.Controls.Add(this.groupBox8);
+            this.tabPage5.Controls.Add(this.groupBox9);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(882, 372);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Выстоновление файлов";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Location = new System.Drawing.Point(218, 12);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(137, 70);
+            this.groupBox8.TabIndex = 6;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Выстоновление сети";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Location = new System.Drawing.Point(10, 12);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(202, 70);
+            this.groupBox9.TabIndex = 5;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Выстоновление командной строки";
             // 
             // label4
             // 
@@ -469,67 +536,26 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Что это такое? ";
             // 
-            // groupBox4
+            // postparametr
             // 
-            this.groupBox4.Controls.Add(this.postime);
-            this.groupBox4.Controls.Add(this.btsppoll);
-            this.groupBox4.Location = new System.Drawing.Point(10, 159);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 85);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Сбросы";
+            this.postparametr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.postparametr.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.postparametr.Location = new System.Drawing.Point(31, 55);
+            this.postparametr.Name = "postparametr";
+            this.postparametr.Size = new System.Drawing.Size(130, 23);
+            this.postparametr.TabIndex = 5;
+            this.postparametr.Text = "Сброс параметров";
+            this.postparametr.UseVisualStyleBackColor = true;
+            this.postparametr.Click += new System.EventHandler(this.postparametr_Click);
             // 
-            // postime
+            // groupBox6
             // 
-            this.postime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.postime.ForeColor = System.Drawing.Color.Red;
-            this.postime.Location = new System.Drawing.Point(40, 19);
-            this.postime.Name = "postime";
-            this.postime.Size = new System.Drawing.Size(115, 23);
-            this.postime.TabIndex = 4;
-            this.postime.Text = "Сброс времени";
-            this.postime.UseVisualStyleBackColor = true;
-            this.postime.Click += new System.EventHandler(this.postime_Click);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.btoproggm);
-            this.groupBox5.Location = new System.Drawing.Point(422, 13);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 85);
-            this.groupBox5.TabIndex = 5;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Информация";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.groupBox8);
-            this.tabPage5.Controls.Add(this.groupBox9);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(882, 372);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Выстоновление файлов";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Location = new System.Drawing.Point(218, 12);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(137, 70);
-            this.groupBox8.TabIndex = 6;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Выстоновление сети";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Location = new System.Drawing.Point(10, 12);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(202, 70);
-            this.groupBox9.TabIndex = 5;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Выстоновление командной строки";
+            this.groupBox6.Location = new System.Drawing.Point(216, 159);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(200, 124);
+            this.groupBox6.TabIndex = 6;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Изменение фона";
             // 
             // main
             // 
@@ -556,14 +582,14 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -611,5 +637,7 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button postparametr;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }

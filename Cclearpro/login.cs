@@ -90,7 +90,7 @@ namespace Cclearpro
             {
                 Data.name = tbname.Text;
                 Data.nameself = true;
-                MessageBox.Show("Сохранено!", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Сохранено! Ваше имя: " + Data.name, "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 f2 = new main();
                 f2.Show();
                 if (Data.nameform == false)

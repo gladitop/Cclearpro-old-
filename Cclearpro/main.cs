@@ -515,5 +515,29 @@ namespace Cclearpro
 
             time.Enabled = true;
         }
+
+
+        //и сновы сбросы :)
+
+        private void postparametr_Click(object sender, EventArgs e)
+        {
+            //переменные
+
+            Data.name = "";
+            Data.amin = true;
+            Data.closeself = true;
+            Data.nameself = false;
+            Data.amin = true;
+            Data.infoself = true;
+            Data.info = "Что это такое? ";
+            Data.nameform = false;
+
+            //сброс обьектов
+
+            checkcloseself.Checked = true;
+            checkamin.Checked = true;
+            checkinfoleft.Checked = true;
+            checktime.Checked = true;
+        }
     }
 }

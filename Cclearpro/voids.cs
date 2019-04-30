@@ -10,6 +10,7 @@ namespace Cclearpro
     {
         public static void namesaverand()//для сохранение имён через рандом
         {
+            
             Data.name = Data.namerand;
         }
     }
