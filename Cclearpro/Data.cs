@@ -12,7 +12,7 @@ namespace Cclearpro
 
         //переменные которое сразу работают
 
-        public static string name;//кто чтобы хранить имя переменной
+        public static string name = "";//кто чтобы хранить имя переменной
         public static bool nameself = false;//проверить если ли имя
 
         //Настройки

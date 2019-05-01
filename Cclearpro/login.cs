@@ -19,6 +19,7 @@ namespace Cclearpro
 
         main f2;// 2 форма то есть главная
         login f1;// 1 форма то есть авторизация
+        AboutBox1 f3;//3 форма то есть о программе.
 
         public login()
         {
@@ -252,6 +253,19 @@ namespace Cclearpro
                 tbname.Text = Data.namerand;
                 btsavename.PerformClick();
             }
+        }
+
+        //Открывает о программе
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            f3 = new AboutBox1();
+            f3.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Чё надо!?", "А Б В Г Д!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

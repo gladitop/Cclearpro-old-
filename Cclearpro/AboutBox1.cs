@@ -106,5 +106,10 @@ namespace Cclearpro
         {
 
         }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            this.Close();//Исправил малеький баг
+        }
     }
 }

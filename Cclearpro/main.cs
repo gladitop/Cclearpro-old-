@@ -442,6 +442,9 @@ namespace Cclearpro
                 tabPage2.BackColor = Color.DimGray;
                 tabPage1.BackColor = Color.DimGray;
                 comboBox1.Text = "DimGray";
+                label5.Text = "Что это такое? ";
+                tbinfo.Text = "Что это такое? ";
+                textBox1.Text = "";
 
                 //начинаем сброс имени ;)
 
@@ -459,7 +462,7 @@ namespace Cclearpro
 
         private void main_KeyPress(object sender, KeyPressEventArgs e)
         {
-             string key = e.KeyChar.ToString();
+            var key = e.KeyChar.ToString();
 
             if (key == "F1")
             {
@@ -552,6 +555,9 @@ namespace Cclearpro
             tabPage2.BackColor = Color.DimGray;
             tabPage1.BackColor = Color.DimGray;
             comboBox1.Text = "DimGray";
+            label5.Text = "Что это такое? ";
+            tbinfo.Text = "Что это такое? ";
+            textBox1.Text = "";
         }
 
         //Опять настройки )))))))))
@@ -594,12 +600,55 @@ namespace Cclearpro
         }
 
         //мусор
-        
+
         private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }
 
         //мусор
+
+        // и и Сновы настройки :)
+
+        //для информации чтобы можно было изменить
+        //Что это такое?
+
+        private void btinfo_Click(object sender, EventArgs e)
+        {
+            if (tbinfo.Text.Length <= 14)
+            {
+                try
+                {
+                    Data.info = tbinfo.Text + " ";
+                    label5.Text = Data.info;
+                    MessageBox.Show("Сохранено", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка сохранения", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ошибка: Слишком много симболов", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //Пасхалка :)
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Чё надо!?", "А Б В Г Д!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        //Пасхалка :)
+
+        //Открывает о программе
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            f3 = new AboutBox1();
+            f3.Show();
+        }
     }
 }
