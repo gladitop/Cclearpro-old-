@@ -15,6 +15,15 @@ namespace Cclearpro
         public static string name = "";//кто чтобы хранить имя переменной
         public static bool nameself = false;//проверить если ли имя
 
+        //для очистки
+
+        public static double clearmdodd = 0;//Для просмотра сколько всего очистила прога
+        public static double clearmd = 0;//Для просмотра сколько очистила прога
+        public static int clearerrortempt = 0;//для просмотра сколько было ошибок при очистки temp
+        public static int clearerroradd = 0;//для просмотра сколько всего было ошибок
+        public static int clearerrorcor = 0;//для просмотра сколько было ошибок при очистки корзины
+        public static int clearerrorcoradd = 0;//для просмотра сколько всего было ошибок
+
         //Настройки
 
         public static bool closeself = true;//что выводить сообщение вы уверены что хотите это закрыть

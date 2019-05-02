@@ -180,8 +180,52 @@ namespace Cclearpro
             {
                 if (checkTemp.Checked == true)
                 {
-                    cleartemp();
+                    string[] lol;
+
+                    lol = Directory.GetDirectories("C:\\Windows\\Temp");
+
+                    foreach (string s in lol)
+                    {
+                        try
+                        {
+                            Directory.Delete(s, true);
+                        }
+                        catch (Exception ex )
+                        {
+                            Data.clearerrortempt = Data.clearerrortempt + 1;
+                            listBox1.Items.Add($"Ошибка в temp: {ex.Message}");
+                        }
+                    }
+
+                    listBox1.Items.Add("Очистка temp завершина!");
+                    listBox1.Items.Add("Ошибок при очистки temp = " + Data.clearerrortempt);
+                    Data.clearerrortempt = 0;
                 }
+
+                if (checkcor.Checked == true)
+                {
+                    string[] lol;
+
+                    lol = Directory.GetDirectories("C:\\$Recycle.Bin\\S-1-5-21-718561909-4015638277-4017069668-1000");
+
+                    foreach (string s in lol)
+                    {
+                        try
+                        {
+                            Directory.Delete(s, true);
+                        }
+                        catch (Exception ex)
+                        {
+                            Data.clearerrorcor = Data.clearerrorcor + 1;
+                            listBox1.Items.Add($"Ошибка в очистки корзины: {ex.Message}");
+                        }
+                    }
+
+                    listBox1.Items.Add("Очистка корзины завершина!");
+                    listBox1.Items.Add("Ошибок при очистки корзины = " + Data.clearerrorcor);
+                }
+
+
                 MessageBox.Show("Завершено!", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (radioButton2.Checked == true)
@@ -193,31 +237,6 @@ namespace Cclearpro
                 catch { MessageBox.Show("Error: Нет файла под пути C: Windows System32 cleanmgr.exe или другая проблема", "Clearpro", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
-
-        //void-ы
-
-        //для очистки
-
-        //temp
-
-        public static void cleartemp()
-        {
-            try
-            {
-                //пока нет)
-            }
-            catch { MessageBox.Show("Error: clear temp", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-        }
-
-        //загрузки
-
-        //пока нет
-
-        //Мусорная корзина
-
-        //пока нет
-
-        //Для проверки нажата ли наш радио?
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {

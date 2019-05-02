@@ -130,5 +130,17 @@ namespace Cclearpro {
                 this["nameform"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string clearmd {
+            get {
+                return ((string)(this["clearmd"]));
+            }
+            set {
+                this["clearmd"] = value;
+            }
+        }
     }
 }

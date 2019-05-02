@@ -33,11 +33,13 @@
             this.btminis = new System.Windows.Forms.Label();
             this.btcloses = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.checkdonl = new System.Windows.Forms.CheckBox();
@@ -61,8 +63,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btinfo = new System.Windows.Forms.Button();
+            this.tbinfo = new System.Windows.Forms.TextBox();
             this.checktime = new System.Windows.Forms.CheckBox();
             this.checkinfoleft = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkamin = new System.Windows.Forms.CheckBox();
             this.checkcloseself = new System.Windows.Forms.CheckBox();
@@ -73,15 +78,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tbinfo = new System.Windows.Forms.TextBox();
-            this.btinfo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -91,8 +94,6 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btminis
@@ -132,6 +133,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(898, 26);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -190,6 +202,16 @@
             this.tabPage1.Text = "Основное";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(165, 13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(489, 184);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -205,6 +227,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage2.Controls.Add(this.listBox1);
             this.tabPage2.Controls.Add(this.checkdonl);
             this.tabPage2.Controls.Add(this.checkcor);
             this.tabPage2.Controls.Add(this.checkTemp);
@@ -214,13 +237,15 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(882, 366);
+            this.tabPage2.Size = new System.Drawing.Size(882, 377);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Проверки на мусор";
             // 
             // checkdonl
             // 
             this.checkdonl.AutoSize = true;
+            this.checkdonl.Checked = true;
+            this.checkdonl.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkdonl.Enabled = false;
             this.checkdonl.Location = new System.Drawing.Point(391, 98);
             this.checkdonl.Name = "checkdonl";
@@ -232,6 +257,8 @@
             // checkcor
             // 
             this.checkcor.AutoSize = true;
+            this.checkcor.Checked = true;
+            this.checkcor.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkcor.Enabled = false;
             this.checkcor.Location = new System.Drawing.Point(391, 61);
             this.checkcor.Name = "checkcor";
@@ -243,6 +270,8 @@
             // checkTemp
             // 
             this.checkTemp.AutoSize = true;
+            this.checkTemp.Checked = true;
+            this.checkTemp.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkTemp.Enabled = false;
             this.checkTemp.Location = new System.Drawing.Point(391, 26);
             this.checkTemp.Name = "checkTemp";
@@ -281,7 +310,7 @@
             // Clear
             // 
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clear.Location = new System.Drawing.Point(331, 266);
+            this.Clear.Location = new System.Drawing.Point(331, 222);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(192, 75);
             this.Clear.TabIndex = 0;
@@ -302,7 +331,7 @@
             this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(882, 366);
+            this.tabPage3.Size = new System.Drawing.Size(882, 377);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Насторойки";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -462,6 +491,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Информация";
             // 
+            // btinfo
+            // 
+            this.btinfo.Location = new System.Drawing.Point(59, 165);
+            this.btinfo.Name = "btinfo";
+            this.btinfo.Size = new System.Drawing.Size(75, 23);
+            this.btinfo.TabIndex = 2;
+            this.btinfo.Text = "Выбрать";
+            this.btinfo.UseVisualStyleBackColor = true;
+            this.btinfo.Click += new System.EventHandler(this.btinfo_Click);
+            // 
+            // tbinfo
+            // 
+            this.tbinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbinfo.Location = new System.Drawing.Point(17, 114);
+            this.tbinfo.Name = "tbinfo";
+            this.tbinfo.Size = new System.Drawing.Size(164, 29);
+            this.tbinfo.TabIndex = 3;
+            this.tbinfo.Text = "Что это такое?";
+            // 
             // checktime
             // 
             this.checktime.AutoSize = true;
@@ -493,6 +541,15 @@
             this.checkinfoleft.CheckedChanged += new System.EventHandler(this.checkinfoleft_CheckedChanged);
             this.checkinfoleft.MouseEnter += new System.EventHandler(this.checkinfoleft_MouseEnter);
             this.checkinfoleft.MouseLeave += new System.EventHandler(this.checkinfoleft_MouseLeave);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(0, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(205, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "_________________________________";
             // 
             // groupBox1
             // 
@@ -528,10 +585,10 @@
             this.checkcloseself.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkcloseself.Location = new System.Drawing.Point(6, 19);
             this.checkcloseself.Name = "checkcloseself";
-            this.checkcloseself.Size = new System.Drawing.Size(120, 17);
+            this.checkcloseself.Size = new System.Drawing.Size(138, 17);
             this.checkcloseself.TabIndex = 0;
             this.checkcloseself.Tag = "";
-            this.checkcloseself.Text = "Сразу закрывать?";
+            this.checkcloseself.Text = "Вывожить сообщение";
             this.checkcloseself.UseVisualStyleBackColor = true;
             this.checkcloseself.CheckedChanged += new System.EventHandler(this.checkcloseself_CheckedChanged);
             this.checkcloseself.MouseEnter += new System.EventHandler(this.checkcloseself_MouseEnter);
@@ -553,7 +610,7 @@
             this.tabPage5.Controls.Add(this.groupBox9);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(882, 366);
+            this.tabPage5.Size = new System.Drawing.Size(882, 377);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Выстоновление файлов";
             // 
@@ -599,54 +656,15 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Что это такое? ";
             // 
-            // label7
+            // listBox1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(0, 94);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(205, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "_________________________________";
-            // 
-            // tbinfo
-            // 
-            this.tbinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbinfo.Location = new System.Drawing.Point(17, 114);
-            this.tbinfo.Name = "tbinfo";
-            this.tbinfo.Size = new System.Drawing.Size(164, 29);
-            this.tbinfo.TabIndex = 3;
-            this.tbinfo.Text = "Что это такое?";
-            // 
-            // btinfo
-            // 
-            this.btinfo.Location = new System.Drawing.Point(59, 165);
-            this.btinfo.Name = "btinfo";
-            this.btinfo.Size = new System.Drawing.Size(75, 23);
-            this.btinfo.TabIndex = 2;
-            this.btinfo.Text = "Выбрать";
-            this.btinfo.UseVisualStyleBackColor = true;
-            this.btinfo.Click += new System.EventHandler(this.btinfo_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(165, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(489, 184);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Ошибки:"});
+            this.listBox1.Location = new System.Drawing.Point(0, 301);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(882, 69);
+            this.listBox1.TabIndex = 6;
             // 
             // main
             // 
@@ -665,11 +683,13 @@
             this.Load += new System.EventHandler(this.main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -683,8 +703,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -740,5 +758,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
