@@ -133,10 +133,10 @@ namespace Cclearpro {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string clearmd {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double clearmd {
             get {
-                return ((string)(this["clearmd"]));
+                return ((double)(this["clearmd"]));
             }
             set {
                 this["clearmd"] = value;

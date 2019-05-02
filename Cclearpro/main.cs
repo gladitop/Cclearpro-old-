@@ -11,6 +11,19 @@ using System.Windows.Forms;
 
 //что я добавил
 using System.IO;
+using System.Threading;
+
+//это надо спросить
+
+enum RecycleFlags : int
+{
+    // No confirmation dialog when emptying the recycle bin
+    SHERB_NOCONFIRMATION = 0x00000001,
+    // No progress tracking window during the emptying of the recycle bin
+    SHERB_NOPROGRESSUI = 0x00000001,
+    // No sound whent the emptying of the recycle bin is complete
+    SHERB_NOSOUND = 0x00000004
+}
 
 namespace Cclearpro
 {
@@ -32,6 +45,10 @@ namespace Cclearpro
         int c;//секунды
         int z;//минуты
         int x;//Часы
+
+        // Shell32.dll is where SHEmptyRecycleBin is located
+        // The signature of SHEmptyRecycleBin (located in Shell32.dll)
+        static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlags dwFlags);
 
         public main()
         {
@@ -190,7 +207,7 @@ namespace Cclearpro
                         {
                             Directory.Delete(s, true);
                         }
-                        catch (Exception ex )
+                        catch (Exception ex)
                         {
                             Data.clearerrortempt = Data.clearerrortempt + 1;
                             listBox1.Items.Add($"Ошибка в temp: {ex.Message}");
@@ -204,9 +221,22 @@ namespace Cclearpro
 
                 if (checkcor.Checked == true)
                 {
+                    try
+                    {
+                        //SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlags.SHERB_NOSOUND | RecycleFlags.SHERB_NOCONFIRMATION);
+                    }
+                    catch
+                    {
+
+                    }
+                }
+
+                
+                if (checkdonl.Checked == true)
+                {
                     string[] lol;
 
-                    lol = Directory.GetDirectories("C:\\$Recycle.Bin\\S-1-5-21-718561909-4015638277-4017069668-1000");
+                    lol = Directory.GetDirectories("C:\\Users\\Дамир\\Downloads");
 
                     foreach (string s in lol)
                     {
@@ -216,17 +246,16 @@ namespace Cclearpro
                         }
                         catch (Exception ex)
                         {
-                            Data.clearerrorcor = Data.clearerrorcor + 1;
-                            listBox1.Items.Add($"Ошибка в очистки корзины: {ex.Message}");
+                            Data.clearerdown = Data.clearerdown + 1;
+                            listBox1.Items.Add($"Ошибка в очистки загрузок: {ex.Message}");
                         }
                     }
 
-                    listBox1.Items.Add("Очистка корзины завершина!");
-                    listBox1.Items.Add("Ошибок при очистки корзины = " + Data.clearerrorcor);
+                    listBox1.Items.Add("Очистка загрузок завершина!");
+                    listBox1.Items.Add("Ошибок при очистки загрузок = " + Data.clearerdown);
                 }
-
-
-                MessageBox.Show("Завершено!", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                MessageBox.Show("Завершено! Всего ошибок = " + (Data.clearerrortempt + Data.clearerrorcor + Data.clearerdown), "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (radioButton2.Checked == true)
             {
@@ -448,6 +477,7 @@ namespace Cclearpro
                 Data.info = "Что это такое? ";
                 Data.nameform = false;
                 Data.colorbed = "DimGray";
+                Data.lagg = true;
 
                 //сброс обьектов
 
@@ -464,6 +494,8 @@ namespace Cclearpro
                 label5.Text = "Что это такое? ";
                 tbinfo.Text = "Что это такое? ";
                 textBox1.Text = "";
+                listBox1.Visible = true;
+                checklogg.Checked = true;
 
                 //начинаем сброс имени ;)
 
@@ -561,6 +593,7 @@ namespace Cclearpro
             Data.info = "Что это такое? ";
             Data.nameform = false;
             Data.colorbed = "DimGray";
+            Data.lagg = true;
 
             //сброс обьектов
 
@@ -577,6 +610,8 @@ namespace Cclearpro
             label5.Text = "Что это такое? ";
             tbinfo.Text = "Что это такое? ";
             textBox1.Text = "";
+            listBox1.Visible = true;
+            checklogg.Checked = true;
         }
 
         //Опять настройки )))))))))
@@ -668,6 +703,22 @@ namespace Cclearpro
         {
             f3 = new AboutBox1();
             f3.Show();
+        }
+
+        //опять настройки :)
+
+        //чтобы показывался логи
+
+        private void checklogg_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checklogg.Checked == false)
+            {
+                listBox1.Visible = false;
+            }
+            else if (checklogg.Checked == true)
+            {
+                listBox1.Visible = true;
+            }
         }
     }
 }

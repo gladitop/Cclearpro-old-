@@ -42,6 +42,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.checkdonl = new System.Windows.Forms.CheckBox();
             this.checkcor = new System.Windows.Forms.CheckBox();
             this.checkTemp = new System.Windows.Forms.CheckBox();
@@ -78,7 +79,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.checklogg = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -241,6 +243,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Проверки на мусор";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Ошибки:"});
+            this.listBox1.Location = new System.Drawing.Point(0, 296);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(882, 82);
+            this.listBox1.TabIndex = 6;
+            // 
             // checkdonl
             // 
             this.checkdonl.AutoSize = true;
@@ -310,7 +322,7 @@
             // Clear
             // 
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clear.Location = new System.Drawing.Point(331, 222);
+            this.Clear.Location = new System.Drawing.Point(331, 220);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(192, 75);
             this.Clear.TabIndex = 0;
@@ -378,7 +390,7 @@
             this.groupBox5.Size = new System.Drawing.Size(200, 85);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Информация";
+            this.groupBox5.Text = "Информация о программе";
             // 
             // btoproggm
             // 
@@ -479,6 +491,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checklogg);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.btinfo);
             this.groupBox2.Controls.Add(this.tbinfo);
             this.groupBox2.Controls.Add(this.checktime);
@@ -486,7 +500,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(10, 86);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 197);
+            this.groupBox2.Size = new System.Drawing.Size(200, 284);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Информация";
@@ -545,11 +559,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(0, 94);
+            this.label7.Location = new System.Drawing.Point(3, 94);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(205, 13);
+            this.label7.Size = new System.Drawing.Size(193, 13);
             this.label7.TabIndex = 1;
-            this.label7.Text = "_________________________________";
+            this.label7.Text = "_______________________________";
             // 
             // groupBox1
             // 
@@ -656,15 +670,28 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Что это такое? ";
             // 
-            // listBox1
+            // label8
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Ошибки:"});
-            this.listBox1.Location = new System.Drawing.Point(0, 301);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(882, 69);
-            this.listBox1.TabIndex = 6;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 203);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(193, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "_______________________________";
+            // 
+            // checklogg
+            // 
+            this.checklogg.AutoSize = true;
+            this.checklogg.Checked = true;
+            this.checklogg.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checklogg.Location = new System.Drawing.Point(10, 247);
+            this.checklogg.Name = "checklogg";
+            this.checklogg.Size = new System.Drawing.Size(115, 17);
+            this.checklogg.TabIndex = 5;
+            this.checklogg.Tag = "";
+            this.checklogg.Text = "Показывать логи";
+            this.checklogg.UseVisualStyleBackColor = true;
+            this.checklogg.CheckedChanged += new System.EventHandler(this.checklogg_CheckedChanged);
             // 
             // main
             // 
@@ -759,5 +786,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.CheckBox checklogg;
+        private System.Windows.Forms.Label label8;
     }
 }

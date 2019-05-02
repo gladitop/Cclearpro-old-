@@ -23,6 +23,8 @@ namespace Cclearpro
         public static int clearerroradd = 0;//для просмотра сколько всего было ошибок
         public static int clearerrorcor = 0;//для просмотра сколько было ошибок при очистки корзины
         public static int clearerrorcoradd = 0;//для просмотра сколько всего было ошибок
+        public static int clearerdown = 0;//для просмотра сколько было ошибок при очистки загрузок
+        public static int clearerdownadd = 0;//для просмотра сколько всего было ошибок
 
         //Настройки
 
@@ -30,6 +32,7 @@ namespace Cclearpro
         public static bool amin = true;//Анимация чтобы при навидение кнопки закрыть было красной
         public static bool infoself = true;//параметр показывать инфо?
         public static string colorbed = "DimGray";//цвет заднего цвета
+        public static bool lagg = true;//чтобы показывает логи
 
         //Напинималки ;)
 
