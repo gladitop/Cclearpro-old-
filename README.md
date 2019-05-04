@@ -1,5 +1,15 @@
-# Cclearpro
+*  / ____|   | |                                
+* | |     ___| | ___  __ _ _ __ _ __  _ __ ___  
+* | |    / __| |/ _ \/ _` | '__| '_ \| '__/ _ \ 
+* | |___| (__| |  __/ (_| | |  | |_) | | | (_) |
+*  \_____\___|_|\___|\__,_|_|  | .__/|_|  \___/ 
+*                              | |              
+*                              |_|                      
+				
 
+
+# Cclearpro
+				
 Программа для очистки компьютера. эту прогу сделали русские и татарен. Язык C#. Среда разработки Visual Studio 2017
 
 # Для разработков
@@ -23,13 +33,13 @@ AboutBox1.cs                        | это форма о программе
 
 просто для описания
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/43d64e613bd90f88bb9f3586c86b45348f64c58e
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/43d64e613bd90f88bb9f3586c86b45348f64c58e
 
 * 2
 
 короче для входа проги. Чтобы красиво было на гидхабе.
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/552b68ff66aa3033027bced7a59c8283edfe3f01
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/552b68ff66aa3033027bced7a59c8283edfe3f01
 
 * 3
 
@@ -48,7 +58,7 @@ AboutBox1.cs                        | это форма о программе
 МИНУСЫ
 Пока 2 форма не готова-
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/fd1473f228433953a6d6cae7ce5802f6ec24e53f
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/fd1473f228433953a6d6cae7ce5802f6ec24e53f
 
 * 4
 
@@ -62,7 +72,7 @@ AboutBox1.cs                        | это форма о программе
 Минусы
 Мало чего добавилось-
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/0dd16ce229ef57becdd123ebbd893bab047a9a24
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/0dd16ce229ef57becdd123ebbd893bab047a9a24
 
 * 5
 
@@ -75,7 +85,7 @@ AboutBox1.cs                        | это форма о программе
 Что автаризация нормально работала (ну пока нет)-
 P.S не думал что разработка так много времени требует! Но я не кину этот проект!
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/5a3007fb7849c95e880df6b6265588ed328332cc
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/5a3007fb7849c95e880df6b6265588ed328332cc
 
 * 6
 
@@ -88,7 +98,7 @@ P.S не думал что разработка так много времени
 Минусы
 Слишком много маленьких изменений-
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/89b2e481e46f7047439e5bf8779321e77c91a1db
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/89b2e481e46f7047439e5bf8779321e77c91a1db
 
 * 7
 
@@ -111,7 +121,7 @@ P.S не думал что разработка так много времени
 Минусы
 Пока не готово полнустью в гладка очистка мусора-
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/3af07346d52fb6a787f95de08b20d86ad1c15ef4
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/3af07346d52fb6a787f95de08b20d86ad1c15ef4
 
 * 8
 
@@ -129,7 +139,7 @@ P.S не думал что разработка так много времени
 Разное
 слишком долго-
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/0a9e2cfaa69c3dfd4f2aac8a69f38668e4361b2e
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/0a9e2cfaa69c3dfd4f2aac8a69f38668e4361b2e
 
 * 9
 
@@ -137,7 +147,7 @@ P.S не думал что разработка так много времени
 
 надо обновление написать!
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/518f47f63dec2bbcc2c34f981f5fe6492b85db0f
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/518f47f63dec2bbcc2c34f981f5fe6492b85db0f
 
 * 10
 
@@ -145,7 +155,7 @@ P.S не думал что разработка так много времени
 
 …настройки Информация Функции Добавилось сообщение вы уверны закрыть прогу? Код обнолён Настройки Информация Минусы Компы Сделана на слабом ноутбуке :( - English plus Design Finalized check garbage started tweaking settings Information of a Function was Added to the message are you sure to close the app? Code updated Settings Information of the Cons of the Components is Made on a weak laptop :( -. translation by Yandex
 
-Ссылка: https://github.com/damiralmaev/Cclearpro/commit/451e60c954e693179c3c50e7f7d604f5c6b9b117
+* Ссылка: https://github.com/damiralmaev/Cclearpro/commit/451e60c954e693179c3c50e7f7d604f5c6b9b117
 
 * 11
 
@@ -153,7 +163,7 @@ P.S не думал что разработка так много времени
 
 Описание
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/f0b8dad8dcabb2ecd573a15eab38604d038a69fa
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/f0b8dad8dcabb2ecd573a15eab38604d038a69fa
 
 * 12
 
@@ -161,7 +171,7 @@ P.S не думал что разработка так много времени
 
 …аг Минусы сделано на слабом ноутбуке, есть маленьнкий баг
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/11e45685c61a24a95b987324e83d23b12bc91e82
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/11e45685c61a24a95b987324e83d23b12bc91e82
 
 
 * 13
@@ -170,58 +180,64 @@ P.S не думал что разработка так много времени
 
 Описание (опять)
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/c57ed7abcf8ca2975c95973705fd64bf70cca625
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/c57ed7abcf8ca2975c95973705fd64bf70cca625
 
 * 14
 
 плюсы увеличил скороть кода, убрал пару переменных, сделал нормальное скрытее информации, сделал нормальное скрытее времени, дороботал инфу, добавилось новая форма, сделано описание, добавил смена имени
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/21a2e032d0e13cf63e88c6347f5e76dbdcb71a0b
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/21a2e032d0e13cf63e88c6347f5e76dbdcb71a0b
 
 * 15
 
 Плюсы исправлен баг, полный сброс, дороботал настройки, больше коментов!, напонималки добавилось, добавилось меню ускорение системы, добавил быстрые клавиши (наверно работать будет)
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/0f30f77948c991ab785e07697543d7807a1ea512
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/0f30f77948c991ab785e07697543d7807a1ea512
 
 * 16
 
 добавлено xml (Для сохранялки), цель оптимизировать код, инфа, улусшение в настройках сбросы, улученый дизайню. Начил делать выстоновление файлов, рандомное имя в login.cs, перменная для рандомных имён, пока только 10, удалили лишней файл "Cclearpro.rar", добавлен новый класс для хранение void-ов.
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/c8891ecc7663e54fc0539c5de2238e03b5b1be41
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/c8891ecc7663e54fc0539c5de2238e03b5b1be41
 
 * 17
 
 сделал чтобы в сообщение показывалось имя пользователя, Изменил цвет фона, сделал для сбросов сброс параметров, начил доробатовать в меню настроек Изменение фона. И это всё :)
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/7738322cd797ff108a7f3522a927d83bb9733281
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/7738322cd797ff108a7f3522a927d83bb9733281
 
 * 18
 
 Добавил переменную для заднего цвета, сделал в настроик на изменение цвета на заднем фоне, добавлен файл для хранение настроек.
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/7459c4a9aa8a675c5a7615298926c0948f8575ba
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/7459c4a9aa8a675c5a7615298926c0948f8575ba
 
 * 19
 
 сделал другие горячии клавиши (надеюсь они будут работать), При нажатии картинки открывается о программе, Исправил баг о зокрытие в о программе, Добавлено в меню Основное логотип проги, добавлено ужасная иконка (только в приложение в низу нечего нет), изменил переменную, добавил переменные в постаяные (то есть в сохранялку), новый элемент для сбросов, испрален баг. Коменнтарий: Надо учить как использавать поиск и как управлять файломи и папками, то без этого у меня нечего не получиться ;(.
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/94c93f717abe3d497d0b29c39afc273baea4f112
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/94c93f717abe3d497d0b29c39afc273baea4f112
 
 * 20
 
 Иправил ошибку в предложение, начил наконец делать очистку, сделалал очистку temp,  сделаны логи, добавлены новые переменные, удалил куча не нужных комментов, добавлены новые параметры для сохраненки файла, начил делать очистку корзизу (только это пока не готово), скоро программа это будет готово (я очень удивлён думал что я её не когда не то делаю. это круто!).
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/d3e9837513f927944c8819492018b833b8bac503
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/d3e9837513f927944c8819492018b833b8bac503
 
 * 21
 
 есть один баг  в очистки корзины, добавил очистка загрузок, улучшил дизайн, добавлены новые переменные, добавил новую библиотеку, испраил ошибку в предложение, сделал в настройках чтобы можно было отключить логи, исправил файл которое сохраняет настройки, добавил переменную для настроек логи.
 
-ссылка: https://github.com/damiralmaev/Cclearpro/commit/0ec25692606af7271070934cb36a96008f2bdf51
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/0ec25692606af7271070934cb36a96008f2bdf51
 
 * 22
 
 просто красиво описание
 
-ссылка: это сегодня такое обновление!
+* ссылка: https://github.com/damiralmaev/Cclearpro/commit/962c7b90811f88fe49e32e5395c24f9405b13a67
+
+* 23
+
+просто красивое название проги и больше красивого описание
+
+* ссылка: это сегодня такое обновление!
