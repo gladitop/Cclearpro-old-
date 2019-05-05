@@ -14,7 +14,7 @@ using System.IO;
 using System.Threading;
 
 //это надо спросить
-
+/*
 enum RecycleFlags : int
 {
     // No confirmation dialog when emptying the recycle bin
@@ -24,6 +24,7 @@ enum RecycleFlags : int
     // No sound whent the emptying of the recycle bin is complete
     SHERB_NOSOUND = 0x00000004
 }
+*/
 
 namespace Cclearpro
 {
@@ -48,7 +49,7 @@ namespace Cclearpro
 
         // Shell32.dll is where SHEmptyRecycleBin is located
         // The signature of SHEmptyRecycleBin (located in Shell32.dll)
-        static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlags dwFlags);
+        //static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlags dwFlags);
 
         public main()
         {
@@ -197,6 +198,9 @@ namespace Cclearpro
             {
                 if (checkTemp.Checked == true)
                 {
+
+                    //Для очитски папок
+
                     string[] lol;
 
                     lol = Directory.GetDirectories("C:\\Windows\\Temp");
@@ -214,9 +218,30 @@ namespace Cclearpro
                         }
                     }
 
-                    listBox1.Items.Add("Очистка temp завершина!");
-                    listBox1.Items.Add("Ошибок при очистки temp = " + Data.clearerrortempt);
-                    Data.clearerrortempt = 0;
+                    listBox1.Items.Add("Очистка temp в папки завершина!");
+                    listBox1.Items.Add("Ошибок при очистки temp в папки = " + Data.clearerrortempt);
+
+                    //Для очитски файлов
+
+                    string[] clear;
+
+                    clear = Directory.GetFiles("C:\\Windows\\Temp");
+
+                    foreach (string s in clear)
+                    {
+                        try
+                        {
+                            Directory.Delete(s, true);
+                        }
+                        catch (Exception ex)
+                        {
+                            Data.clearerrortempt = Data.clearerrortempt + 1;
+                            listBox1.Items.Add($"Ошибка в temp файлы: {ex.Message}");
+                        }
+                    }
+
+                    listBox1.Items.Add("Очистка temp в папки завершина в файлы!");
+                    listBox1.Items.Add("Ошибок при очистки temp в папки в файлы = " + Data.clearerrortempt);
                 }
 
                 if (checkcor.Checked == true)
@@ -234,9 +259,12 @@ namespace Cclearpro
                 
                 if (checkdonl.Checked == true)
                 {
+
+                    //для очисток папок
+
                     string[] lol;
 
-                    lol = Directory.GetDirectories("C:\\Users\\Дамир\\Downloads");
+                    lol = Directory.GetDirectories("C:\\Users\\\\Downloads");
 
                     foreach (string s in lol)
                     {
@@ -247,15 +275,40 @@ namespace Cclearpro
                         catch (Exception ex)
                         {
                             Data.clearerdown = Data.clearerdown + 1;
-                            listBox1.Items.Add($"Ошибка в очистки загрузок: {ex.Message}");
+                            listBox1.Items.Add($"Ошибка в очистки загрузок в папки: {ex.Message}");
                         }
                     }
 
-                    listBox1.Items.Add("Очистка загрузок завершина!");
-                    listBox1.Items.Add("Ошибок при очистки загрузок = " + Data.clearerdown);
+                    listBox1.Items.Add("Очистка загрузок в папки завершина!");
+                    listBox1.Items.Add("Ошибок при очистки загрузок в папки = " + Data.clearerdown);
+                }
+
+                //очитска пустыз папок в документах
+
+                if (checkclearhyckdow.Checked == true)
+                {
+                    string[] clear;
+
+                    clear = Directory.GetDirectories("C:\\Users\\\\Documents");
+
+                    foreach (string s in clear)
+                    {
+                        try
+                        {
+                            Directory.Delete(s, false);
+                        }
+                        catch (Exception ex)
+                        {
+                            Data.cleardownown = Data.cleardownown + 1;
+                            listBox1.Items.Add($"Ошибка в очистки документов в папки: {ex.Message}");
+                        }
+                    }
+
+                    listBox1.Items.Add("Очистка документов в папки завершина!");
+                    listBox1.Items.Add("Ошибок при очистки докуметов в папки = " + Data.cleardownown);
                 }
                 
-                MessageBox.Show("Завершено! Всего ошибок = " + (Data.clearerrortempt + Data.clearerrorcor + Data.clearerdown), "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Завершено! Всего ошибок = " + (Data.clearerrortempt + Data.clearerrorcor + Data.clearerdown + Data.cleardownown), "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (radioButton2.Checked == true)
             {
@@ -274,34 +327,40 @@ namespace Cclearpro
                 checkTemp.Enabled = true;
                 checkcor.Enabled = true;
                 checkdonl.Enabled = true;
+                checkclearhyckdow.Enabled = true;
             }
             else
             {
                 checkTemp.Enabled = false;
                 checkcor.Enabled = false;
                 checkdonl.Enabled = false;
+                checkclearhyckdow.Enabled = false;
             }
             if (radioButton1.Checked == true)
             {
                 checkTemp.Enabled = true;
                 checkcor.Enabled = true;
                 checkdonl.Enabled = true;
+                checkclearhyckdow.Enabled = true;
             }
             else
             {
                 checkTemp.Enabled = false;
+                checkclearhyckdow.Enabled = false;
             }
             if (radioButton1.Checked == true)
             {
                 checkTemp.Enabled = true;
                 checkcor.Enabled = true;
                 checkdonl.Enabled = true;
+                checkclearhyckdow.Enabled = true;
             }
             else
             {
                 checkTemp.Enabled = false;
                 checkcor.Enabled = false;
                 checkdonl.Enabled = false;
+                checkclearhyckdow.Enabled = false;
             }
         }
 
@@ -396,7 +455,7 @@ namespace Cclearpro
         private void checkinfoleft_MouseEnter(object sender, EventArgs e)
         {
             label5.Text = Data.info;//Исправляет баг
-            label5.Text = label5.Text + "Это чтобы показывало информацию";
+            label5.Text = label5.Text + "Это чтобы показывало информацию в тексте";
         }
 
         private void checkinfoleft_MouseLeave(object sender, EventArgs e)
@@ -496,6 +555,7 @@ namespace Cclearpro
                 textBox1.Text = "";
                 listBox1.Visible = true;
                 checklogg.Checked = true;
+                toolTip1.Active = true;
 
                 //начинаем сброс имени ;)
 
@@ -612,6 +672,7 @@ namespace Cclearpro
             textBox1.Text = "";
             listBox1.Visible = true;
             checklogg.Checked = true;
+            toolTip1.Active = true;
         }
 
         //Опять настройки )))))))))
@@ -718,6 +779,83 @@ namespace Cclearpro
             else if (checklogg.Checked == true)
             {
                 listBox1.Visible = true;
+            }
+        }
+
+        //настройки опять
+
+        //Чтобы нормально показывал информацию
+
+        private void checlinfonorm_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checlinfonorm.Checked == true)
+            {
+                toolTip1.Active = true;
+            }
+            else
+            {
+                toolTip1.Active = false;
+            }
+        }
+
+        //анимация
+
+        private void checlinfonorm_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это чтобы очистить ваш компьютер";
+        }
+
+        private void checlinfonorm_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+        }
+
+        //очистка мусора
+
+        //Исправил баг
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                checkTemp.Enabled = true;
+                checkcor.Enabled = true;
+                checkdonl.Enabled = true;
+                checkclearhyckdow.Enabled = true;
+            }
+            else
+            {
+                checkTemp.Enabled = false;
+                checkcor.Enabled = false;
+                checkdonl.Enabled = false;
+                checkclearhyckdow.Enabled = false;
+            }
+            if (radioButton1.Checked == true)
+            {
+                checkTemp.Enabled = true;
+                checkcor.Enabled = true;
+                checkdonl.Enabled = true;
+                checkclearhyckdow.Enabled = true;
+            }
+            else
+            {
+                checkTemp.Enabled = false;
+                checkclearhyckdow.Enabled = false;
+            }
+            if (radioButton1.Checked == true)
+            {
+                checkTemp.Enabled = true;
+                checkcor.Enabled = true;
+                checkdonl.Enabled = true;
+                checkclearhyckdow.Enabled = true;
+            }
+            else
+            {
+                checkTemp.Enabled = false;
+                checkcor.Enabled = false;
+                checkdonl.Enabled = false;
+                checkclearhyckdow.Enabled = false;
             }
         }
     }

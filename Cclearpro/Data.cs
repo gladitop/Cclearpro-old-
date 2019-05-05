@@ -25,6 +25,8 @@ namespace Cclearpro
         public static int clearerrorcoradd = 0;//для просмотра сколько всего было ошибок
         public static int clearerdown = 0;//для просмотра сколько было ошибок при очистки загрузок
         public static int clearerdownadd = 0;//для просмотра сколько всего было ошибок
+        public static int cleardownown = 0;//для просмотра сколько было ошибок при очистки в пустых папок в документов
+        public static int cleardownownadd = 0;//для просмотра всех ошибок при очистки в пустых папок в документов
 
         //Настройки
 

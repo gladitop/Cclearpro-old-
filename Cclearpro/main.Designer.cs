@@ -42,6 +42,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkclearhyckdow = new System.Windows.Forms.CheckBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.checkdonl = new System.Windows.Forms.CheckBox();
             this.checkcor = new System.Windows.Forms.CheckBox();
@@ -64,6 +65,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checlinfonorm = new System.Windows.Forms.CheckBox();
+            this.checklogg = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.btinfo = new System.Windows.Forms.Button();
             this.tbinfo = new System.Windows.Forms.TextBox();
             this.checktime = new System.Windows.Forms.CheckBox();
@@ -79,8 +83,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.checklogg = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -223,12 +226,14 @@
             this.label1.Size = new System.Drawing.Size(398, 73);
             this.label1.TabIndex = 0;
             this.label1.Text = "Здрайствуй ";
+            this.toolTip1.SetToolTip(this.label1, "Это чтобы показывалось ваше имя");
             this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
             this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage2.Controls.Add(this.checkclearhyckdow);
             this.tabPage2.Controls.Add(this.listBox1);
             this.tabPage2.Controls.Add(this.checkdonl);
             this.tabPage2.Controls.Add(this.checkcor);
@@ -242,6 +247,20 @@
             this.tabPage2.Size = new System.Drawing.Size(882, 377);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Проверки на мусор";
+            // 
+            // checkclearhyckdow
+            // 
+            this.checkclearhyckdow.AutoSize = true;
+            this.checkclearhyckdow.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkclearhyckdow.Checked = true;
+            this.checkclearhyckdow.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkclearhyckdow.Enabled = false;
+            this.checkclearhyckdow.Location = new System.Drawing.Point(566, 26);
+            this.checkclearhyckdow.Name = "checkclearhyckdow";
+            this.checkclearhyckdow.Size = new System.Drawing.Size(260, 17);
+            this.checkclearhyckdow.TabIndex = 7;
+            this.checkclearhyckdow.Text = "Очистка папки в документов на пустые папки";
+            this.checkclearhyckdow.UseVisualStyleBackColor = true;
             // 
             // listBox1
             // 
@@ -303,7 +322,9 @@
             this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Средствами Windows";
+            this.toolTip1.SetToolTip(this.radioButton2, "Это чтобы Windows чистил");
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             this.radioButton2.MouseEnter += new System.EventHandler(this.radioButton2_MouseEnter);
             this.radioButton2.MouseLeave += new System.EventHandler(this.radioButton2_MouseLeave);
             // 
@@ -327,6 +348,7 @@
             this.Clear.Size = new System.Drawing.Size(192, 75);
             this.Clear.TabIndex = 0;
             this.Clear.Text = "Проверить!";
+            this.toolTip1.SetToolTip(this.Clear, "Это чтобы очистить ваш компьютер");
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             this.Clear.MouseEnter += new System.EventHandler(this.Clear_MouseEnter);
@@ -491,6 +513,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checlinfonorm);
             this.groupBox2.Controls.Add(this.checklogg);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.btinfo);
@@ -504,6 +527,46 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Информация";
+            // 
+            // checlinfonorm
+            // 
+            this.checlinfonorm.AutoSize = true;
+            this.checlinfonorm.Checked = true;
+            this.checlinfonorm.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checlinfonorm.Location = new System.Drawing.Point(6, 65);
+            this.checlinfonorm.Name = "checlinfonorm";
+            this.checlinfonorm.Size = new System.Drawing.Size(128, 17);
+            this.checlinfonorm.TabIndex = 6;
+            this.checlinfonorm.Tag = "";
+            this.checlinfonorm.Text = "Показывать что это";
+            this.toolTip1.SetToolTip(this.checlinfonorm, "Это чтобы показывало информацию");
+            this.checlinfonorm.UseVisualStyleBackColor = true;
+            this.checlinfonorm.CheckedChanged += new System.EventHandler(this.checlinfonorm_CheckedChanged);
+            this.checlinfonorm.MouseEnter += new System.EventHandler(this.checlinfonorm_MouseEnter);
+            this.checlinfonorm.MouseLeave += new System.EventHandler(this.checlinfonorm_MouseLeave);
+            // 
+            // checklogg
+            // 
+            this.checklogg.AutoSize = true;
+            this.checklogg.Checked = true;
+            this.checklogg.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checklogg.Location = new System.Drawing.Point(10, 247);
+            this.checklogg.Name = "checklogg";
+            this.checklogg.Size = new System.Drawing.Size(115, 17);
+            this.checklogg.TabIndex = 5;
+            this.checklogg.Tag = "";
+            this.checklogg.Text = "Показывать логи";
+            this.checklogg.UseVisualStyleBackColor = true;
+            this.checklogg.CheckedChanged += new System.EventHandler(this.checklogg_CheckedChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 203);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(193, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "_______________________________";
             // 
             // btinfo
             // 
@@ -535,6 +598,7 @@
             this.checktime.TabIndex = 3;
             this.checktime.Tag = "";
             this.checktime.Text = "Показывать время";
+            this.toolTip1.SetToolTip(this.checktime, "Это чтобы показывало время");
             this.checktime.UseVisualStyleBackColor = true;
             this.checktime.CheckedChanged += new System.EventHandler(this.checktime_CheckedChanged);
             this.checktime.MouseEnter += new System.EventHandler(this.checktime_MouseEnter);
@@ -547,10 +611,11 @@
             this.checkinfoleft.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkinfoleft.Location = new System.Drawing.Point(6, 19);
             this.checkinfoleft.Name = "checkinfoleft";
-            this.checkinfoleft.Size = new System.Drawing.Size(128, 17);
+            this.checkinfoleft.Size = new System.Drawing.Size(174, 17);
             this.checkinfoleft.TabIndex = 2;
             this.checkinfoleft.Tag = "";
-            this.checkinfoleft.Text = "Показывать что это";
+            this.checkinfoleft.Text = "Показывать что это в тексте";
+            this.toolTip1.SetToolTip(this.checkinfoleft, "Это чтобы показывало информацию в тексте");
             this.checkinfoleft.UseVisualStyleBackColor = true;
             this.checkinfoleft.CheckedChanged += new System.EventHandler(this.checkinfoleft_CheckedChanged);
             this.checkinfoleft.MouseEnter += new System.EventHandler(this.checkinfoleft_MouseEnter);
@@ -587,6 +652,7 @@
             this.checkamin.TabIndex = 1;
             this.checkamin.Tag = "";
             this.checkamin.Text = "Анимация";
+            this.toolTip1.SetToolTip(this.checkamin, "Это чтобы показывалось анимацию кнопок");
             this.checkamin.UseVisualStyleBackColor = true;
             this.checkamin.CheckedChanged += new System.EventHandler(this.checkamin_CheckedChanged);
             this.checkamin.MouseEnter += new System.EventHandler(this.checkamin_MouseEnter);
@@ -603,6 +669,7 @@
             this.checkcloseself.TabIndex = 0;
             this.checkcloseself.Tag = "";
             this.checkcloseself.Text = "Вывожить сообщение";
+            this.toolTip1.SetToolTip(this.checkcloseself, "Это чтобы показывалось подвержедение чтобы закрыть прогу");
             this.checkcloseself.UseVisualStyleBackColor = true;
             this.checkcloseself.CheckedChanged += new System.EventHandler(this.checkcloseself_CheckedChanged);
             this.checkcloseself.MouseEnter += new System.EventHandler(this.checkcloseself_MouseEnter);
@@ -670,28 +737,11 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Что это такое? ";
             // 
-            // label8
+            // toolTip1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 203);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(193, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "_______________________________";
-            // 
-            // checklogg
-            // 
-            this.checklogg.AutoSize = true;
-            this.checklogg.Checked = true;
-            this.checklogg.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checklogg.Location = new System.Drawing.Point(10, 247);
-            this.checklogg.Name = "checklogg";
-            this.checklogg.Size = new System.Drawing.Size(115, 17);
-            this.checklogg.TabIndex = 5;
-            this.checklogg.Tag = "";
-            this.checklogg.Text = "Показывать логи";
-            this.checklogg.UseVisualStyleBackColor = true;
-            this.checklogg.CheckedChanged += new System.EventHandler(this.checklogg_CheckedChanged);
+            this.toolTip1.Tag = "";
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Информация";
             // 
             // main
             // 
@@ -788,5 +838,8 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.CheckBox checklogg;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.CheckBox checlinfonorm;
+        public System.Windows.Forms.CheckBox checkclearhyckdow;
     }
 }
