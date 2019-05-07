@@ -39,6 +39,14 @@ namespace Cclearpro
         login f1;// 1 форма то есть авторизация
         AboutBox1 f3;// 2 форма
 
+        //странная ошибка
+
+        loggForm f4;// 4 форма то есть логи
+
+        //навсякий случий
+
+        //int newd;
+
         //для таймеров
 
         //Time
@@ -214,7 +222,7 @@ namespace Cclearpro
                         catch (Exception ex)
                         {
                             Data.clearerrortempt = Data.clearerrortempt + 1;
-                            listBox1.Items.Add($"Ошибка в temp: {ex.Message}");
+                            listBox1.Items.Add($"Ошибка в очистки temp в папки: {ex.Message}");
                         }
                     }
 
@@ -281,31 +289,6 @@ namespace Cclearpro
 
                     listBox1.Items.Add("Очистка загрузок в папки завершина!");
                     listBox1.Items.Add("Ошибок при очистки загрузок в папки = " + Data.clearerdown);
-                }
-
-                //очитска пустыз папок в документах
-
-                if (checkclearhyckdow.Checked == true)
-                {
-                    string[] clear;
-
-                    clear = Directory.GetDirectories("C:\\Users\\\\Documents");
-
-                    foreach (string s in clear)
-                    {
-                        try
-                        {
-                            Directory.Delete(s, false);
-                        }
-                        catch (Exception ex)
-                        {
-                            Data.cleardownown = Data.cleardownown + 1;
-                            listBox1.Items.Add($"Ошибка в очистки документов в папки: {ex.Message}");
-                        }
-                    }
-
-                    listBox1.Items.Add("Очистка документов в папки завершина!");
-                    listBox1.Items.Add("Ошибок при очистки докуметов в папки = " + Data.cleardownown);
                 }
                 
                 MessageBox.Show("Завершено! Всего ошибок = " + (Data.clearerrortempt + Data.clearerrorcor + Data.clearerdown + Data.cleardownown), "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -857,6 +840,35 @@ namespace Cclearpro
                 checkdonl.Enabled = false;
                 checkclearhyckdow.Enabled = false;
             }
+        }
+
+        //инфа
+
+        private void logwiew_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Чтобы посмотреть все логи";
+        }
+
+        private void logwiew_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+        }
+
+        //чтобы посмотреть логи полностью
+
+        private void logwiew_Click(object sender, EventArgs e)
+        {
+
+            //есть ошибка номер 1
+
+            listBox1.Items.IndexOf(Data.logg);
+            try
+            {
+                loggForm value = new loggForm();
+                value.Show();
+            }
+            catch { }
         }
     }
 }

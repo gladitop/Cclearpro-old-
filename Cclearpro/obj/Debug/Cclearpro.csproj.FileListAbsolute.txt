@@ -55,3 +55,4 @@ C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.Abo
 C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.AboutBox1.resources
 C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\bin\Debug\Cclearpro.xml
 C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\bin\Debug\Cclearpro.xml
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.loggForm.resources

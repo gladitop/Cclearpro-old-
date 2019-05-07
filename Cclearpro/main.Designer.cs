@@ -84,6 +84,7 @@
             this.time = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.logwiew = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -233,6 +234,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage2.Controls.Add(this.logwiew);
             this.tabPage2.Controls.Add(this.checkclearhyckdow);
             this.tabPage2.Controls.Add(this.listBox1);
             this.tabPage2.Controls.Add(this.checkdonl);
@@ -743,6 +745,20 @@
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Информация";
             // 
+            // logwiew
+            // 
+            this.logwiew.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logwiew.Location = new System.Drawing.Point(784, 253);
+            this.logwiew.Name = "logwiew";
+            this.logwiew.Size = new System.Drawing.Size(97, 42);
+            this.logwiew.TabIndex = 8;
+            this.logwiew.Text = "логи";
+            this.toolTip1.SetToolTip(this.logwiew, "Чтобы посмотреть все логи");
+            this.logwiew.UseVisualStyleBackColor = true;
+            this.logwiew.Click += new System.EventHandler(this.logwiew_Click);
+            this.logwiew.MouseEnter += new System.EventHandler(this.logwiew_MouseEnter);
+            this.logwiew.MouseLeave += new System.EventHandler(this.logwiew_MouseLeave);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -841,5 +857,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.CheckBox checlinfonorm;
         public System.Windows.Forms.CheckBox checkclearhyckdow;
+        private System.Windows.Forms.Button logwiew;
     }
 }

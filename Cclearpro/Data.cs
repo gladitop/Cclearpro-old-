@@ -35,6 +35,8 @@ namespace Cclearpro
         public static bool infoself = true;//параметр показывать инфо?
         public static string colorbed = "DimGray";//цвет заднего цвета
         public static bool lagg = true;//чтобы показывает логи
+        public static string[] logg; //чтобы показывает логи
+        public static int loggbak = 0;//исправлеет баг
 
         //Напинималки ;)
 
