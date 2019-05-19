@@ -41,7 +41,7 @@ namespace Cclearpro
 
         //странная ошибка
 
-        loggForm f4;// 4 форма то есть логи
+        //logg f4;// 4 форма то есть логи
 
         //навсякий случий
 
@@ -204,6 +204,7 @@ namespace Cclearpro
         {
             if (radioButton1.Checked == true)
             {
+
                 if (checkTemp.Checked == true)
                 {
 
@@ -264,7 +265,7 @@ namespace Cclearpro
                     }
                 }
 
-                
+
                 if (checkdonl.Checked == true)
                 {
 
@@ -290,7 +291,22 @@ namespace Cclearpro
                     listBox1.Items.Add("Очистка загрузок в папки завершина!");
                     listBox1.Items.Add("Ошибок при очистки загрузок в папки = " + Data.clearerdown);
                 }
-                
+
+                Data.lo = 1;
+
+                /*
+                listBox1.Items.ToString = Data.logg[];
+
+                foreach (string s in listBox1.Items)
+                {
+                    Data.lo++;
+                    listBox1.Items.ToString = Data.logg[Data.lo];
+                }
+
+    */
+
+                Data.loggbak = 0;
+
                 MessageBox.Show("Завершено! Всего ошибок = " + (Data.clearerrortempt + Data.clearerrorcor + Data.clearerdown + Data.cleardownown), "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (radioButton2.Checked == true)
@@ -862,13 +878,8 @@ namespace Cclearpro
 
             //есть ошибка номер 1
 
-            listBox1.Items.IndexOf(Data.logg);
-            try
-            {
-                loggForm value = new loggForm();
-                value.Show();
-            }
-            catch { }
+            logssss ifrm = new logssss();
+            ifrm.Show(); // отображаем Form-у
         }
     }
 }

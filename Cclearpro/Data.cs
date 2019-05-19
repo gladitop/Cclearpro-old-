@@ -37,6 +37,7 @@ namespace Cclearpro
         public static bool lagg = true;//чтобы показывает логи
         public static string[] logg; //чтобы показывает логи
         public static int loggbak = 0;//исправлеет баг
+        public static int lo = 0;//исправлеет баг
 
         //Напинималки ;)
 

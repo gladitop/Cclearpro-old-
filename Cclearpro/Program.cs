@@ -17,6 +17,10 @@ namespace Cclearpro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //думаю надо сделать файл которое считал это всё
+            //вить это есть сам запуск проги :)
+
             if (Data.nameself == true)
             {
                 Application.Run(new login());

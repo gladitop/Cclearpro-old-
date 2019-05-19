@@ -13,5 +13,9 @@ namespace Cclearpro
         {
             Data.name = Data.namerand;
         }
+
+        //почему я сделал пустой класс в файле?
+        //я странный
+
     }
 }

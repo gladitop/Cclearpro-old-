@@ -69,17 +69,17 @@
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
     <Compile Include="Data.cs" />
-    <Compile Include="loggForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="loggForm.Designer.cs">
-      <DependentUpon>loggForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logsview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logsview.Designer.cs">
+      <DependentUpon>logsview.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -98,11 +98,11 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loggForm.resx">
-      <DependentUpon>loggForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logsview.resx">
+      <DependentUpon>logsview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

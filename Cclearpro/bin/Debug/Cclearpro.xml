@@ -20,23 +20,6 @@
             содержимое этого метода с помощью редактора кода.
             </summary>
         </member>
-        <member name="F:Cclearpro.loggForm.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Cclearpro.loggForm.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Cclearpro.loggForm.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
         <member name="F:Cclearpro.login.components">
             <summary>
             Обязательная переменная конструктора.
@@ -52,6 +35,23 @@
             <summary>
             Требуемый метод для поддержки конструктора — не изменяйте 
             содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="F:Cclearpro.logssss.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Cclearpro.logssss.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Cclearpro.logssss.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
             </summary>
         </member>
         <member name="F:Cclearpro.main.components">

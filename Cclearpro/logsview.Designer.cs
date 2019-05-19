@@ -1,6 +1,6 @@
 ﻿namespace Cclearpro
 {
-    partial class loggForm
+    partial class logssss
     {
         /// <summary>
         /// Required designer variable.
@@ -36,21 +36,21 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Items.AddRange(new object[] {
             "Ошибки:"});
-            this.listBox1.Location = new System.Drawing.Point(-2, 1);
+            this.listBox1.Location = new System.Drawing.Point(-1, 0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(607, 563);
+            this.listBox1.Size = new System.Drawing.Size(551, 589);
             this.listBox1.TabIndex = 7;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // loggForm
+            // logssss
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 567);
+            this.ClientSize = new System.Drawing.Size(551, 588);
             this.Controls.Add(this.listBox1);
-            this.Name = "loggForm";
-            this.Text = "loggForm";
-            this.Load += new System.EventHandler(this.loggForm_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "logssss";
+            this.Text = "Логи: полный просмотр";
+            this.Load += new System.EventHandler(this.logssss_Load);
             this.ResumeLayout(false);
 
         }

@@ -11,30 +11,19 @@ using System.Windows.Forms;
 
 namespace Cclearpro
 {
-    public partial class loggForm : Form
+    public partial class logssss : Form
     {
-        public loggForm()
+        public logssss()
         {
             InitializeComponent();
         }
 
-        private void loggForm_Load(object sender, EventArgs e)//При загруски формы
+        private void logssss_Load(object sender, EventArgs e)//при загруски формы
         {
-            //есть ошибка номер 1
-
             foreach (string s in Data.logg)
             {
                 listBox1.Items.Add(s);
             }
         }
-
-        //мусор
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //мусор
     }
 }
