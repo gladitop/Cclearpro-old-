@@ -42,6 +42,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.logwiew = new System.Windows.Forms.Button();
             this.checkclearhyckdow = new System.Windows.Forms.CheckBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.checkdonl = new System.Windows.Forms.CheckBox();
@@ -84,7 +85,11 @@
             this.time = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.logwiew = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.checkicon = new System.Windows.Forms.CheckBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -100,6 +105,8 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // btminis
@@ -189,7 +196,9 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(1, 22);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(890, 406);
@@ -249,6 +258,20 @@
             this.tabPage2.Size = new System.Drawing.Size(882, 377);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Проверки на мусор";
+            // 
+            // logwiew
+            // 
+            this.logwiew.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logwiew.Location = new System.Drawing.Point(784, 253);
+            this.logwiew.Name = "logwiew";
+            this.logwiew.Size = new System.Drawing.Size(97, 42);
+            this.logwiew.TabIndex = 8;
+            this.logwiew.Text = "логи";
+            this.toolTip1.SetToolTip(this.logwiew, "Чтобы посмотреть все логи");
+            this.logwiew.UseVisualStyleBackColor = true;
+            this.logwiew.Click += new System.EventHandler(this.logwiew_Click);
+            this.logwiew.MouseEnter += new System.EventHandler(this.logwiew_MouseEnter);
+            this.logwiew.MouseLeave += new System.EventHandler(this.logwiew_MouseLeave);
             // 
             // checkclearhyckdow
             // 
@@ -359,6 +382,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Controls.Add(this.groupBox4);
@@ -745,19 +769,59 @@
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Информация";
             // 
-            // logwiew
+            // notifyIcon1
             // 
-            this.logwiew.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.logwiew.Location = new System.Drawing.Point(784, 253);
-            this.logwiew.Name = "logwiew";
-            this.logwiew.Size = new System.Drawing.Size(97, 42);
-            this.logwiew.TabIndex = 8;
-            this.logwiew.Text = "логи";
-            this.toolTip1.SetToolTip(this.logwiew, "Чтобы посмотреть все логи");
-            this.logwiew.UseVisualStyleBackColor = true;
-            this.logwiew.Click += new System.EventHandler(this.logwiew_Click);
-            this.logwiew.MouseEnter += new System.EventHandler(this.logwiew_MouseEnter);
-            this.logwiew.MouseLeave += new System.EventHandler(this.logwiew_MouseLeave);
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Cclearpro";
+            this.notifyIcon1.Visible = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.checkicon);
+            this.groupBox7.Location = new System.Drawing.Point(422, 241);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(200, 85);
+            this.groupBox7.TabIndex = 6;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Трей";
+            // 
+            // checkicon
+            // 
+            this.checkicon.AutoSize = true;
+            this.checkicon.Checked = true;
+            this.checkicon.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkicon.Location = new System.Drawing.Point(29, 35);
+            this.checkicon.Name = "checkicon";
+            this.checkicon.Size = new System.Drawing.Size(133, 17);
+            this.checkicon.TabIndex = 7;
+            this.checkicon.Tag = "";
+            this.checkicon.Text = "Показывать иконку?";
+            this.toolTip1.SetToolTip(this.checkicon, "Это иконка которое показывается в трее");
+            this.checkicon.UseVisualStyleBackColor = true;
+            this.checkicon.CheckedChanged += new System.EventHandler(this.checkicon_CheckedChanged);
+            this.checkicon.MouseEnter += new System.EventHandler(this.checkicon_MouseEnter);
+            this.checkicon.MouseLeave += new System.EventHandler(this.checkicon_MouseLeave);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.webBrowser1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(882, 377);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Наш сайт";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
+            this.webBrowser1.Size = new System.Drawing.Size(882, 377);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.Url = new System.Uri("https://yandex.ru/", System.UriKind.Absolute);
             // 
             // main
             // 
@@ -796,6 +860,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -858,5 +925,10 @@
         private System.Windows.Forms.CheckBox checlinfonorm;
         public System.Windows.Forms.CheckBox checkclearhyckdow;
         private System.Windows.Forms.Button logwiew;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.CheckBox checkicon;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

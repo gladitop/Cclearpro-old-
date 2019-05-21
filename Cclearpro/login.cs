@@ -172,7 +172,7 @@ namespace Cclearpro
             Random rad = new Random();
 
             //в переменную водим
-            Data.namerand = Convert.ToString(rad.Next(1, 10));
+            Data.namerand = Convert.ToString(rad.Next(1, 14));
 
             //пишём именя
             if (Data.namerand == "1")
@@ -249,6 +249,20 @@ namespace Cclearpro
             else if (Data.namerand == "11")
             {
                 Data.namerand = "Mip";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+            else if (Data.namerand == "13")
+            {
+                Data.namerand = "Dani";
+                voids.namesaverand();
+                tbname.Text = Data.namerand;
+                btsavename.PerformClick();
+            }
+            else if (Data.namerand == "14")
+            {
+                Data.namerand = "ToDani";
                 voids.namesaverand();
                 tbname.Text = Data.namerand;
                 btsavename.PerformClick();

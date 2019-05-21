@@ -62,6 +62,14 @@ namespace Cclearpro
         public main()
         {
             InitializeComponent();
+
+            //я думал что это строчка безполезна
+
+            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;//загружаем инфо иконку
+            notifyIcon1.BalloonTipText = "Я буду здесь";//текст подсказки
+            notifyIcon1.BalloonTipTitle = "Информация";//название подсказки
+            notifyIcon1.ShowBalloonTip(5);//сколько она будет весеть
+
         }
 
         //кнопочки
@@ -641,37 +649,52 @@ namespace Cclearpro
 
         private void postparametr_Click(object sender, EventArgs e)
         {
-            //переменные
+            DialogResult lol = MessageBox.Show("Вы уверены? Все ваши настройки будут сбросаны!", "Cclearpro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            Data.name = "";
-            Data.amin = true;
-            Data.closeself = true;
-            Data.nameself = false;
-            Data.amin = true;
-            Data.infoself = true;
-            Data.info = "Что это такое? ";
-            Data.nameform = false;
-            Data.colorbed = "DimGray";
-            Data.lagg = true;
+            if (lol == DialogResult.Yes)
+            {
 
-            //сброс обьектов
+                //переменные
 
-            checkcloseself.Checked = true;
-            checkamin.Checked = true;
-            checkinfoleft.Checked = true;
-            checktime.Checked = true;
-            tabPage5.BackColor = Color.DimGray;
-            tabPage4.BackColor = Color.DimGray;
-            tabPage3.BackColor = Color.DimGray;
-            tabPage2.BackColor = Color.DimGray;
-            tabPage1.BackColor = Color.DimGray;
-            comboBox1.Text = "DimGray";
-            label5.Text = "Что это такое? ";
-            tbinfo.Text = "Что это такое? ";
-            textBox1.Text = "";
-            listBox1.Visible = true;
-            checklogg.Checked = true;
-            toolTip1.Active = true;
+                Data.name = "";
+                Data.amin = true;
+                Data.closeself = true;
+                Data.nameself = false;
+                Data.amin = true;
+                Data.infoself = true;
+                Data.info = "Что это такое? ";
+                Data.nameform = false;
+                Data.colorbed = "DimGray";
+                Data.lagg = true;
+                Data.checkicons = true;
+
+                //сброс обьектов
+
+                checkcloseself.Checked = true;
+                checkamin.Checked = true;
+                checkinfoleft.Checked = true;
+                checktime.Checked = true;
+                tabPage5.BackColor = Color.DimGray;
+                tabPage4.BackColor = Color.DimGray;
+                tabPage3.BackColor = Color.DimGray;
+                tabPage2.BackColor = Color.DimGray;
+                tabPage1.BackColor = Color.DimGray;
+                comboBox1.Text = "DimGray";
+                label5.Text = "Что это такое? ";
+                tbinfo.Text = "Что это такое? ";
+                textBox1.Text = "";
+                listBox1.Visible = true;
+                checklogg.Checked = true;
+                toolTip1.Active = true;
+                notifyIcon1.Visible = true;
+                checkicon.Checked = true;
+                checlinfonorm.Checked = true;
+
+            }
+            else if (lol == DialogResult.No)
+            {
+
+            }
         }
 
         //Опять настройки )))))))))
@@ -880,6 +903,35 @@ namespace Cclearpro
 
             logssss ifrm = new logssss();
             ifrm.Show(); // отображаем Form-у
+        }
+
+        //настройки..
+
+        private void checkicon_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkicon.Checked == true)
+            {
+                notifyIcon1.Visible = true;
+                Data.checkicons = true;
+            }
+            else if (checkicon.Checked != true)
+            {
+                notifyIcon1.Visible = false;
+                Data.checkicons = false;
+            }
+        }
+
+        //информация
+
+        private void checkicon_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
+            label5.Text = label5.Text + "Это иконка которое показывается в трее";
+        }
+
+        private void checkicon_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Text = Data.info;//Исправляет баг
         }
     }
 }

@@ -38,6 +38,7 @@ namespace Cclearpro
         public static string[] logg; //чтобы показывает логи
         public static int loggbak = 0;//исправлеет баг
         public static int lo = 0;//исправлеет баг
+        public static bool checkicons = true;//для показа иконки которое в трее
 
         //Напинималки ;)
 
