@@ -12,6 +12,7 @@ using System.Windows.Forms;
 //что я добавил
 using System.IO;
 using System.Threading;
+using System.Diagnostics;
 
 //это надо спросить
 /*
@@ -66,10 +67,17 @@ namespace Cclearpro
             //я думал что это строчка безполезна
 
             notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;//загружаем инфо иконку
-            notifyIcon1.BalloonTipText = "Я буду здесь";//текст подсказки
+            notifyIcon1.BalloonTipText = "Я буду здесь чтобы вы могли быстро открыть программу";//текст подсказки
             notifyIcon1.BalloonTipTitle = "Информация";//название подсказки
             notifyIcon1.ShowBalloonTip(5);//сколько она будет весеть
+            this.ShowInTaskbar = false;
+            notifyIcon1.Click += notifyIcon1_Click;
 
+        }
+
+        void notifyIcon1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
         }
 
         //кнопочки
@@ -160,6 +168,9 @@ namespace Cclearpro
         //При загруски формы
         private void main_Load(object sender, EventArgs e)
         {
+
+            //Проверка имени
+
             if (Data.name == "")
             {
                 MessageBox.Show("Error: Нет имени", "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -172,6 +183,20 @@ namespace Cclearpro
                 label1.Text = label1.Text + Data.name;
                 radioButton2.Checked = true; // Да мне было лень менять настройки)))
             }
+
+            //загружаем все процессы для убийства их ;)
+
+            //тут ошибка номер 2
+
+            Process[] process = Process.GetProcesses();
+
+            foreach (Process processname in process)
+            {
+                string lol;
+                lol = Convert.ToString(processname);
+                comboBox2.Items.Add(lol);
+            }
+
         }
 
         //таймеры
@@ -932,6 +957,11 @@ namespace Cclearpro
         private void checkicon_MouseLeave(object sender, EventArgs e)
         {
             label5.Text = Data.info;//Исправляет баг
+        }
+
+        private void btkillprocess_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
