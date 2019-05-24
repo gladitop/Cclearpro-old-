@@ -5,6 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//что я добавил
+
+using System.Diagnostics;
+
 namespace Cclearpro
 {
     static class Data//Хранит себе переменные чтобы было их удобно перемещать между формами
@@ -27,6 +31,10 @@ namespace Cclearpro
         public static int clearerdownadd = 0;//для просмотра сколько всего было ошибок
         public static int cleardownown = 0;//для просмотра сколько было ошибок при очистки в пустых папок в документов
         public static int cleardownownadd = 0;//для просмотра всех ошибок при очистки в пустых папок в документов
+
+        //выстовление системы
+
+        public static Process[] proces;//для старого режима
 
         //Настройки
 

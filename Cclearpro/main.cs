@@ -56,6 +56,8 @@ namespace Cclearpro
         int z;//минуты
         int x;//Часы
 
+        int i;//для счёта процессов
+
         // Shell32.dll is where SHEmptyRecycleBin is located
         // The signature of SHEmptyRecycleBin (located in Shell32.dll)
         //static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlags dwFlags);
@@ -184,19 +186,31 @@ namespace Cclearpro
                 radioButton2.Checked = true; // Да мне было лень менять настройки)))
             }
 
-            //загружаем все процессы для убийства их ;)
+            //тут нет ошибки номер 2 ;)
 
-            //тут ошибка номер 2
+            //чтобы убить процесс (для старого режима)
 
-            Process[] process = Process.GetProcesses();
+            Data.proces = Process.GetProcesses();
 
-            foreach (Process processname in process)
+            comboBox2.Items.Clear();
+
+            foreach (Process name in Data.proces)
             {
-                string lol;
-                lol = Convert.ToString(processname);
-                comboBox2.Items.Add(lol);
+                comboBox2.Items.Add(name.ProcessName);
             }
 
+            //новый режим
+
+            Process[] p = Process.GetProcesses();
+
+            listBox2.Items.Clear();
+
+            foreach (Process name in Data.proces)
+            {
+                listBox2.Items.Add(name.ProcessName);
+            }
+ 
+                label9.Text = "Всего процессов: " + p.Length;
         }
 
         //таймеры
@@ -221,6 +235,40 @@ namespace Cclearpro
             }
             label4.Text = "Время работы программы: ";
             label4.Text = Convert.ToString(label4.Text + c + ":" + z + ":" + x);
+
+            //процессы
+
+            Data.proces = Process.GetProcesses();
+
+            comboBox2.Items.Clear();
+
+            foreach (Process name in Data.proces)
+            {
+                comboBox2.Items.Add(name.ProcessName);
+            }
+
+            //новый режим
+
+            //дотелать!
+
+            if (checkkillprocess.Checked == true)
+            {
+                Process[] p = Process.GetProcesses();
+                i = 0;
+                i = p.Length;
+
+                if (p.Length >= i)
+                {
+                    listBox2.Items.Clear();
+
+                    foreach (Process name in Data.proces)
+                    {
+                        listBox2.Items.Add(name.ProcessName);
+                    }
+
+                    label9.Text = "Всего процессов: " + p.Length;
+                }
+            }
         }
 
 
@@ -959,9 +1007,35 @@ namespace Cclearpro
             label5.Text = Data.info;//Исправляет баг
         }
 
+        //Наконец, то я начил делать выстоновление системы
+
+        //командная строка
+
+        //чтобы убить процесс
+
         private void btkillprocess_Click(object sender, EventArgs e)
         {
+            if (comboBox2.Text == "")
+            {
+                MessageBox.Show("Выберите процесс");
+            }
+            else if (comboBox2.Text != "")
+            {
 
+                //удаляем!
+
+                try
+                {
+                    var namestring = comboBox2.Text;
+
+                    Process l;
+                    
+                }
+                catch
+                {
+
+                }
+            }
         }
     }
 }
