@@ -211,6 +211,7 @@ namespace Cclearpro
             }
  
                 label9.Text = "Всего процессов: " + p.Length;
+
         }
 
         //таймеры
@@ -238,26 +239,29 @@ namespace Cclearpro
 
             //процессы
 
+            //старый режим
+
             Data.proces = Process.GetProcesses();
 
-            comboBox2.Items.Clear();
-
-            foreach (Process name in Data.proces)
+            if (Data.proces.Length != i)
             {
-                comboBox2.Items.Add(name.ProcessName);
+                comboBox2.Items.Clear();
+
+                foreach (Process name in Data.proces)
+                {
+                    comboBox2.Items.Add(name.ProcessName);
+                }
             }
 
             //новый режим
 
-            //дотелать!
+            //дотелать! (то делано!)
 
             if (checkkillprocess.Checked == true)
             {
                 Process[] p = Process.GetProcesses();
-                i = 0;
-                i = p.Length;
 
-                if (p.Length >= i)
+                if (p.Length != i)
                 {
                     listBox2.Items.Clear();
 
@@ -268,6 +272,12 @@ namespace Cclearpro
 
                     label9.Text = "Всего процессов: " + p.Length;
                 }
+                else
+                {
+
+                }
+
+                i = p.Length;
             }
         }
 
@@ -1024,18 +1034,37 @@ namespace Cclearpro
 
                 //удаляем!
 
-                try
-                {
-                    var namestring = comboBox2.Text;
-
-                    Process l;
-                    
-                }
-                catch
-                {
-
-                }
+                ProcessKiller.Proces.Kill(comboBox2.Text);
             }
+        }
+
+        //новый режим!
+
+        //Убить процесс
+
+        private void btkillprocessnew_Click(object sender, EventArgs e)
+        {
+            ProcessKiller.Proces.Kill(listBox2.SelectedItem.ToString());
+        }
+
+        //наш сайт
+
+        //чтобы открыть в полном экране
+
+        private void btOTKRET_Click(object sender, EventArgs e)
+        {
+            braycerwww l = new braycerwww();
+            l.Show();
+        }
+
+        //вытоновление системы
+
+        //все утилиты
+
+        private void btaloytuul_Click(object sender, EventArgs e)
+        {
+            aloytuul l = new aloytuul();
+            l.Show();
         }
     }
 }

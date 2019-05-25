@@ -49,6 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ProcessKiller, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\source\repos\ProcessKiller\ProcessKiller\obj\Debug\ProcessKiller.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,7 +72,19 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="aloytuul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aloytuul.Designer.cs">
+      <DependentUpon>aloytuul.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data.cs" />
+    <Compile Include="braycerwww.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="braycerwww.Designer.cs">
+      <DependentUpon>braycerwww.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +113,12 @@
     <Compile Include="voids.cs" />
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aloytuul.resx">
+      <DependentUpon>aloytuul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="braycerwww.resx">
+      <DependentUpon>braycerwww.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

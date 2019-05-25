@@ -81,23 +81,25 @@
             this.checkcloseself = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.checkkillprocess = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btkillprocessnew = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btkillprocess = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.btOTKRET = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.label4 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.btkillprocessnew = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.checkkillprocess = new System.Windows.Forms.CheckBox();
+            this.btaloytuul = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -114,9 +116,9 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // btminis
@@ -750,6 +752,7 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage5.Controls.Add(this.btaloytuul);
             this.tabPage5.Controls.Add(this.groupBox11);
             this.tabPage5.Controls.Add(this.groupBox10);
             this.tabPage5.Controls.Add(this.groupBox8);
@@ -759,6 +762,58 @@
             this.tabPage5.Size = new System.Drawing.Size(882, 377);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Выстоновление системы";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.checkkillprocess);
+            this.groupBox11.Controls.Add(this.label9);
+            this.groupBox11.Controls.Add(this.btkillprocessnew);
+            this.groupBox11.Controls.Add(this.listBox2);
+            this.groupBox11.Location = new System.Drawing.Point(505, 12);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(369, 358);
+            this.groupBox11.TabIndex = 7;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Командная строка (новый режим)";
+            // 
+            // checkkillprocess
+            // 
+            this.checkkillprocess.AutoSize = true;
+            this.checkkillprocess.Checked = true;
+            this.checkkillprocess.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkkillprocess.Location = new System.Drawing.Point(9, 332);
+            this.checkkillprocess.Name = "checkkillprocess";
+            this.checkkillprocess.Size = new System.Drawing.Size(87, 17);
+            this.checkkillprocess.TabIndex = 5;
+            this.checkkillprocess.Text = "Обновлять?";
+            this.checkkillprocess.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(100, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Всего процессов: ";
+            // 
+            // btkillprocessnew
+            // 
+            this.btkillprocessnew.Location = new System.Drawing.Point(130, 320);
+            this.btkillprocessnew.Name = "btkillprocessnew";
+            this.btkillprocessnew.Size = new System.Drawing.Size(128, 38);
+            this.btkillprocessnew.TabIndex = 3;
+            this.btkillprocessnew.Text = "убить";
+            this.btkillprocessnew.UseVisualStyleBackColor = true;
+            this.btkillprocessnew.Click += new System.EventHandler(this.btkillprocessnew_Click);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(6, 32);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(357, 290);
+            this.listBox2.TabIndex = 0;
             // 
             // groupBox10
             // 
@@ -809,6 +864,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.btOTKRET);
             this.tabPage6.Controls.Add(this.webBrowser1);
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
@@ -816,6 +872,16 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Наш сайт";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // btOTKRET
+            // 
+            this.btOTKRET.Location = new System.Drawing.Point(753, 3);
+            this.btOTKRET.Name = "btOTKRET";
+            this.btOTKRET.Size = new System.Drawing.Size(108, 23);
+            this.btOTKRET.TabIndex = 1;
+            this.btOTKRET.Text = "Открыть";
+            this.btOTKRET.UseVisualStyleBackColor = true;
+            this.btOTKRET.Click += new System.EventHandler(this.btOTKRET_Click);
             // 
             // webBrowser1
             // 
@@ -864,54 +930,15 @@
             this.notifyIcon1.Text = "Cclearpro";
             this.notifyIcon1.Visible = true;
             // 
-            // groupBox11
+            // btaloytuul
             // 
-            this.groupBox11.Controls.Add(this.checkkillprocess);
-            this.groupBox11.Controls.Add(this.label9);
-            this.groupBox11.Controls.Add(this.btkillprocessnew);
-            this.groupBox11.Controls.Add(this.listBox2);
-            this.groupBox11.Location = new System.Drawing.Point(505, 12);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(369, 358);
-            this.groupBox11.TabIndex = 7;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Командная строка (новый режим)";
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(6, 32);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(357, 290);
-            this.listBox2.TabIndex = 0;
-            // 
-            // btkillprocessnew
-            // 
-            this.btkillprocessnew.Location = new System.Drawing.Point(130, 320);
-            this.btkillprocessnew.Name = "btkillprocessnew";
-            this.btkillprocessnew.Size = new System.Drawing.Size(128, 38);
-            this.btkillprocessnew.TabIndex = 3;
-            this.btkillprocessnew.Text = "убить";
-            this.btkillprocessnew.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Всего процессов: ";
-            // 
-            // checkkillprocess
-            // 
-            this.checkkillprocess.AutoSize = true;
-            this.checkkillprocess.Location = new System.Drawing.Point(9, 332);
-            this.checkkillprocess.Name = "checkkillprocess";
-            this.checkkillprocess.Size = new System.Drawing.Size(87, 17);
-            this.checkkillprocess.TabIndex = 5;
-            this.checkkillprocess.Text = "Обновлять?";
-            this.checkkillprocess.UseVisualStyleBackColor = true;
+            this.btaloytuul.Location = new System.Drawing.Point(7, 351);
+            this.btaloytuul.Name = "btaloytuul";
+            this.btaloytuul.Size = new System.Drawing.Size(100, 23);
+            this.btaloytuul.TabIndex = 8;
+            this.btaloytuul.Text = "Все утилиты";
+            this.btaloytuul.UseVisualStyleBackColor = true;
+            this.btaloytuul.Click += new System.EventHandler(this.btaloytuul_Click);
             // 
             // main
             // 
@@ -952,10 +979,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage5.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1031,5 +1058,7 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox checkkillprocess;
+        private System.Windows.Forms.Button btOTKRET;
+        private System.Windows.Forms.Button btaloytuul;
     }
 }

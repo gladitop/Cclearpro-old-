@@ -70,3 +70,9 @@ C:\Users\IT-UCH- 6\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.Gene
 C:\Users\IT-UCH- 6\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CoreCompileInputs.cache
 C:\Users\IT-UCH- 6\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.exe
 C:\Users\IT-UCH- 6\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.pdb
+C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\bin\Debug\ProcessKiller.dll
+C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\bin\Debug\ProcessKiller.pdb
+C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.logssss.resources
+C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CopyComplete
+C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.braycerwww.resources
+C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.aloytuul.resources
