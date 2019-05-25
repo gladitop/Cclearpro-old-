@@ -16,5 +16,23 @@ namespace Cclearpro
         {
             InitializeComponent();
         }
+
+        //диспечер задач
+
+        //старый режим
+
+        private void btstaringprocess_Click(object sender, EventArgs e)
+        {
+            processstartingsss f = new processstartingsss();
+            f.Show();
+        }
+
+        //новый режим
+
+        private void btnewprocess_Click(object sender, EventArgs e)
+        {
+            processnewkill f = new processnewkill();
+            f.Show();
+        }
     }
 }

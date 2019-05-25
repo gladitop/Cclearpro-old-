@@ -10,9 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //что я добавил
-using System.IO;
-using System.Threading;
-using System.Diagnostics;
+using System.IO;//для управлениями файлами и папрк
+using System.Threading;//для паузы
+using System.Diagnostics;//процессы
+using Microsoft.Win32;//для реестра
 
 //это надо спросить
 /*
@@ -209,9 +210,16 @@ namespace Cclearpro
             {
                 listBox2.Items.Add(name.ProcessName);
             }
- 
-                label9.Text = "Всего процессов: " + p.Length;
 
+            label9.Text = "Всего процессов: " + p.Length;
+
+            //для реестра
+
+            //надо то делать
+
+            string[] namereg;
+
+            
         }
 
         //таймеры
@@ -249,7 +257,7 @@ namespace Cclearpro
 
                 foreach (Process name in Data.proces)
                 {
-                    comboBox2.Items.Add(name.ProcessName);
+                    comboBox2.Items.Add(name.ProcessName + ".exe");
                 }
             }
 
@@ -267,7 +275,7 @@ namespace Cclearpro
 
                     foreach (Process name in Data.proces)
                     {
-                        listBox2.Items.Add(name.ProcessName);
+                        listBox2.Items.Add(name.ProcessName + ".exe");
                     }
 
                     label9.Text = "Всего процессов: " + p.Length;
@@ -1065,6 +1073,33 @@ namespace Cclearpro
         {
             aloytuul l = new aloytuul();
             l.Show();
+        }
+
+        //мусор
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //мусор
+
+        //вытоновление системы
+
+        //автозагруска (в реестре)
+
+        //удалить
+
+        private void btdeletavto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //обновить
+
+        private void btresetavto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

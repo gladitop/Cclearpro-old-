@@ -76,3 +76,9 @@ C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cc
 C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CopyComplete
 C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.braycerwww.resources
 C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.aloytuul.resources
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\bin\Debug\ProcessKiller.pdb
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.aloytuul.resources
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.braycerwww.resources
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CopyComplete
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.processnewkill.resources
+C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.processstartingsss.resources

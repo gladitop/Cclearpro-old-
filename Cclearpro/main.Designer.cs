@@ -81,6 +81,11 @@
             this.checkcloseself = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.btresetavto = new System.Windows.Forms.Button();
+            this.btdeletavto = new System.Windows.Forms.Button();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.btaloytuul = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.checkkillprocess = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -99,7 +104,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btaloytuul = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -116,6 +121,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -752,6 +758,7 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage5.Controls.Add(this.groupBox12);
             this.tabPage5.Controls.Add(this.btaloytuul);
             this.tabPage5.Controls.Add(this.groupBox11);
             this.tabPage5.Controls.Add(this.groupBox10);
@@ -762,6 +769,58 @@
             this.tabPage5.Size = new System.Drawing.Size(882, 377);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Выстоновление системы";
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.comboBox3);
+            this.groupBox12.Controls.Add(this.btresetavto);
+            this.groupBox12.Controls.Add(this.btdeletavto);
+            this.groupBox12.Controls.Add(this.listBox3);
+            this.groupBox12.Location = new System.Drawing.Point(218, 88);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(281, 282);
+            this.groupBox12.TabIndex = 7;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Автозагруска (в реестре)";
+            // 
+            // btresetavto
+            // 
+            this.btresetavto.Location = new System.Drawing.Point(209, 259);
+            this.btresetavto.Name = "btresetavto";
+            this.btresetavto.Size = new System.Drawing.Size(66, 23);
+            this.btresetavto.TabIndex = 9;
+            this.btresetavto.Text = "Обновить";
+            this.btresetavto.UseVisualStyleBackColor = true;
+            this.btresetavto.Click += new System.EventHandler(this.btresetavto_Click);
+            // 
+            // btdeletavto
+            // 
+            this.btdeletavto.Location = new System.Drawing.Point(154, 259);
+            this.btdeletavto.Name = "btdeletavto";
+            this.btdeletavto.Size = new System.Drawing.Size(61, 23);
+            this.btdeletavto.TabIndex = 6;
+            this.btdeletavto.Text = "Удалить";
+            this.btdeletavto.UseVisualStyleBackColor = true;
+            this.btdeletavto.Click += new System.EventHandler(this.btdeletavto_Click);
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(6, 19);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(269, 238);
+            this.listBox3.TabIndex = 6;
+            // 
+            // btaloytuul
+            // 
+            this.btaloytuul.Location = new System.Drawing.Point(7, 351);
+            this.btaloytuul.Name = "btaloytuul";
+            this.btaloytuul.Size = new System.Drawing.Size(100, 23);
+            this.btaloytuul.TabIndex = 8;
+            this.btaloytuul.Text = "Все утилиты";
+            this.btaloytuul.UseVisualStyleBackColor = true;
+            this.btaloytuul.Click += new System.EventHandler(this.btaloytuul_Click);
             // 
             // groupBox11
             // 
@@ -930,15 +989,13 @@
             this.notifyIcon1.Text = "Cclearpro";
             this.notifyIcon1.Visible = true;
             // 
-            // btaloytuul
+            // comboBox3
             // 
-            this.btaloytuul.Location = new System.Drawing.Point(7, 351);
-            this.btaloytuul.Name = "btaloytuul";
-            this.btaloytuul.Size = new System.Drawing.Size(100, 23);
-            this.btaloytuul.TabIndex = 8;
-            this.btaloytuul.Text = "Все утилиты";
-            this.btaloytuul.UseVisualStyleBackColor = true;
-            this.btaloytuul.Click += new System.EventHandler(this.btaloytuul_Click);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(0, 259);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(156, 21);
+            this.comboBox3.TabIndex = 10;
             // 
             // main
             // 
@@ -979,6 +1036,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -1055,10 +1113,15 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Button btkillprocessnew;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox checkkillprocess;
         private System.Windows.Forms.Button btOTKRET;
         private System.Windows.Forms.Button btaloytuul;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Button btresetavto;
+        private System.Windows.Forms.Button btdeletavto;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
