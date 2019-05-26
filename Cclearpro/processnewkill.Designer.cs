@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(processnewkill));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.btkillprocessnew = new System.Windows.Forms.Button();
@@ -90,6 +91,7 @@
             this.Controls.Add(this.checkkillprocess);
             this.Controls.Add(this.btkillprocessnew);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "processnewkill";
             this.Text = "Диспечер задач (новый режим)";
             this.Load += new System.EventHandler(this.processstartingkill_Load);

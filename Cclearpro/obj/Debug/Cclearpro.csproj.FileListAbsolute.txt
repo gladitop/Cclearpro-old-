@@ -82,3 +82,23 @@ C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.bra
 C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CopyComplete
 C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.processnewkill.resources
 C:\Users\Дамир\Documents\GitHub\Cclearpro\Cclearpro\obj\Debug\Cclearpro.processstartingsss.resources
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\bin\Debug\Cclearpro.exe.config
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\bin\Debug\Cclearpro.xml
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\bin\Debug\Cclearpro.exe
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\bin\Debug\Cclearpro.pdb
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\bin\Debug\ProcessKiller.pdb
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csprojAssemblyReference.cache
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.AboutBox1.resources
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.aloytuul.resources
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.braycerwww.resources
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.login.resources
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.logssss.resources
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.main.resources
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.processnewkill.resources
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.processstartingsss.resources
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.Properties.Resources.resources
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.GenerateResource.cache
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CoreCompileInputs.cache
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CopyComplete
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.exe
+C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.pdb

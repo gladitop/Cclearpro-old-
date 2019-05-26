@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(processstartingsss));
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btkillprocess = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -63,6 +64,7 @@
             this.ClientSize = new System.Drawing.Size(314, 84);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.btkillprocess);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "processstartingsss";
             this.Text = "processstartingsss";
             this.Load += new System.EventHandler(this.processstartingsss_Load);
