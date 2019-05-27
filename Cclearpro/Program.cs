@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//что я добавил
+using System.Threading;
 
 namespace Cclearpro
 {
@@ -32,9 +34,10 @@ namespace Cclearpro
                 Application.Run(new login());
             }
         }
+    }
+}
         //зачем я тут пишу?
         //Ладно
         //И да это я сделал!
         //damiralmaev~!~
-    }
-}
+

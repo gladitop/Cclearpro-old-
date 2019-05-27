@@ -69,6 +69,8 @@ namespace Cclearpro
 
             //я думал что это строчка безполезна
 
+            //загрузка трея
+
             notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;//загружаем инфо иконку
             notifyIcon1.BalloonTipText = "Я буду здесь чтобы вы могли быстро открыть программу";//текст подсказки
             notifyIcon1.BalloonTipTitle = "Информация";//название подсказки
@@ -76,6 +78,13 @@ namespace Cclearpro
             this.ShowInTaskbar = false;
             notifyIcon1.Click += notifyIcon1_Click;
 
+            //прочее
+
+            if (Data.path == "")
+            {
+                pictureBox3.Visible = false;
+                label10.Visible = false;
+            }
         }
 
         void notifyIcon1_Click(object sender, EventArgs e)
@@ -221,7 +230,13 @@ namespace Cclearpro
 
             //для загрузки аватарки
 
-            pictureBox3.Image = new Bitmap(Data.path);
+            try
+            {
+                pictureBox3.Image = new Bitmap(Data.path);
+            }
+            catch {
+
+            }
         }
 
         //таймеры
@@ -301,7 +316,7 @@ namespace Cclearpro
         //Очистка мусора
 
         //Для очистки
-        private void Clear_Click(object sender, EventArgs e)
+        private async void Clear_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
@@ -320,6 +335,7 @@ namespace Cclearpro
                 {
                     Data.addclear++;
                 }
+
 
                 progressBar1.Maximum = Data.addclear;
 
@@ -349,6 +365,8 @@ namespace Cclearpro
                     listBox1.Items.Add("Очистка temp в папки завершина!");
                     listBox1.Items.Add("Ошибок при очистки temp в папки = " + Data.clearerrortempt);
 
+                    progessclear(1);
+
                     //Для очитски файлов
 
                     string[] clear;
@@ -368,10 +386,10 @@ namespace Cclearpro
                         }
                     }
 
-					//заметка
-					
-					//тут не то делано progressBar1
-					
+                    //заметка
+
+                    //тут не то делано progressBar1
+
                     listBox1.Items.Add("Очистка temp в папки завершина в файлы!");
                     listBox1.Items.Add("Ошибок при очистки temp в папки в файлы = " + Data.clearerrortempt);
                 }
@@ -403,6 +421,8 @@ namespace Cclearpro
 
                     listBox1.Items.Add("Очистка загрузок в папки завершина!");
                     listBox1.Items.Add("Ошибок при очистки загрузок в папки = " + Data.clearerdown);
+
+                    progessclear(2);
                 }
 
                 Data.lo = 1;
@@ -444,11 +464,14 @@ namespace Cclearpro
 
                     listBox1.Items.Add("Очистка документах в папки завершина!");
                     listBox1.Items.Add("Ошибок при очистки загрузок в папки = " + Data.cleardownown);
+
+                    progessclear(3);
                 }
-                
+
                 Data.loggbak = 0;
 
                 MessageBox.Show("Завершено! Всего ошибок = " + (Data.clearerrortempt + Data.clearerrorcor + Data.clearerdown + Data.cleardownown), "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
                 Data.clearerrortempt = 0;
                 Data.clearerrorcor = 0;
@@ -468,8 +491,31 @@ namespace Cclearpro
             }
         }
 
-        public async void progessclear()
+        //для прогресса бара
+
+        public async void progessclear(int i)
         {
+            switch (Data.addclear)
+            {
+                case 1:
+                    if (i == 1)
+                    {
+                        progressBar1.Value++;
+                    }
+                    break;
+                case 2:
+                    if (i == 2)
+                    {
+                        progressBar1.Value++;
+                    }
+                    break;
+                case 3:
+                    if (i == 2)
+                    {
+                        progressBar1.Value++;
+                    }
+                    break;
+            }
 
         }
 
@@ -1146,6 +1192,33 @@ namespace Cclearpro
         private void btresetavto_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //настройки
+
+        //смена аватарки
+
+        private void btopenavater_Click(object sender, EventArgs e)
+        {
+            string pp = "";
+
+            OpenFileDialog filss = new OpenFileDialog();
+
+            filss.FileName = pp;
+
+            if (filss.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    pictureBox3.Visible = true;
+                    label10.Visible = true;
+                    pictureBox3.Image = new Bitmap(filss.FileName);
+                }
+                catch
+                {
+
+                }
+            }
         }
     }
 }

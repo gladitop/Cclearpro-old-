@@ -39,9 +39,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.logwiew = new System.Windows.Forms.Button();
             this.checkclearhyckdow = new System.Windows.Forms.CheckBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -104,14 +107,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.btopenavater = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -127,7 +130,7 @@
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // btminis
@@ -240,6 +243,24 @@
             this.tabPage1.Text = "Основное";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(32, 253);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(61, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(36, 233);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Аватарка";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -281,6 +302,14 @@
             this.tabPage2.Size = new System.Drawing.Size(882, 377);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Проверки на мусор";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(0, 274);
+            this.progressBar1.Maximum = 3;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(331, 23);
+            this.progressBar1.TabIndex = 9;
             // 
             // logwiew
             // 
@@ -392,6 +421,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage3.Controls.Add(this.groupBox13);
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.groupBox5);
@@ -989,33 +1019,25 @@
             this.notifyIcon1.Text = "Cclearpro";
             this.notifyIcon1.Visible = true;
             // 
-            // pictureBox3
+            // groupBox13
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(32, 253);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(61, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
+            this.groupBox13.Controls.Add(this.btopenavater);
+            this.groupBox13.Location = new System.Drawing.Point(628, 13);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(200, 140);
+            this.groupBox13.TabIndex = 3;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Смена Аватарки";
             // 
-            // label10
+            // btopenavater
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(36, 233);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Аватарка";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.progressBar1.Location = new System.Drawing.Point(0, 274);
-            this.progressBar1.Maximum = 3;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(331, 23);
-            this.progressBar1.TabIndex = 9;
-            this.progressBar1.Value = 1;
+            this.btopenavater.Location = new System.Drawing.Point(64, 62);
+            this.btopenavater.Name = "btopenavater";
+            this.btopenavater.Size = new System.Drawing.Size(75, 23);
+            this.btopenavater.TabIndex = 2;
+            this.btopenavater.Text = "Открыть";
+            this.btopenavater.UseVisualStyleBackColor = true;
+            this.btopenavater.Click += new System.EventHandler(this.btopenavater_Click);
             // 
             // main
             // 
@@ -1040,6 +1062,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -1061,7 +1084,7 @@
             this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBox13.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1146,5 +1169,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Button btopenavater;
     }
 }
