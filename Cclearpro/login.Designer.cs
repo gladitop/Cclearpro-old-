@@ -38,9 +38,14 @@
             this.tbname = new System.Windows.Forms.TextBox();
             this.btsavename = new System.Windows.Forms.Button();
             this.btrandomname = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btopenpicter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -145,12 +150,47 @@
             this.btrandomname.UseVisualStyleBackColor = false;
             this.btrandomname.Click += new System.EventHandler(this.btrandomname_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(91, 253);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Аватарка";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(87, 273);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(61, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btopenpicter
+            // 
+            this.btopenpicter.Location = new System.Drawing.Point(80, 329);
+            this.btopenpicter.Name = "btopenpicter";
+            this.btopenpicter.Size = new System.Drawing.Size(75, 23);
+            this.btopenpicter.TabIndex = 8;
+            this.btopenpicter.Text = "Открыть";
+            this.btopenpicter.UseVisualStyleBackColor = true;
+            this.btopenpicter.Click += new System.EventHandler(this.btopenpicter_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btopenpicter);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btrandomname);
             this.Controls.Add(this.btsavename);
             this.Controls.Add(this.tbname);
@@ -165,6 +205,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,6 +222,10 @@
         private System.Windows.Forms.Button btsavename;
         public System.Windows.Forms.Button btrandomname;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btopenpicter;
     }
 }
 

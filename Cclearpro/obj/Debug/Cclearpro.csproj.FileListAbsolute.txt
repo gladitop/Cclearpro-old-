@@ -102,3 +102,5 @@ C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro
 C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.csproj.CopyComplete
 C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.exe
 C:\Users\Дамир Хакер\Documents\Cclearpro\Cclearpro\obj\Debug\Cclearpro.pdb
+C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.processnewkill.resources
+C:\Users\Дамир Хакер\Documents\github\Cclearpro\Cclearpro\obj\Debug\Cclearpro.processstartingsss.resources

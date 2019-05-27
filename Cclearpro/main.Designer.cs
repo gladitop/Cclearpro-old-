@@ -46,7 +46,6 @@
             this.checkclearhyckdow = new System.Windows.Forms.CheckBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.checkdonl = new System.Windows.Forms.CheckBox();
-            this.checkcor = new System.Windows.Forms.CheckBox();
             this.checkTemp = new System.Windows.Forms.CheckBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -105,6 +104,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -125,6 +127,7 @@
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btminis
@@ -225,6 +228,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage1.Controls.Add(this.pictureBox3);
+            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -261,11 +266,11 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage2.Controls.Add(this.progressBar1);
             this.tabPage2.Controls.Add(this.logwiew);
             this.tabPage2.Controls.Add(this.checkclearhyckdow);
             this.tabPage2.Controls.Add(this.listBox1);
             this.tabPage2.Controls.Add(this.checkdonl);
-            this.tabPage2.Controls.Add(this.checkcor);
             this.tabPage2.Controls.Add(this.checkTemp);
             this.tabPage2.Controls.Add(this.radioButton2);
             this.tabPage2.Controls.Add(this.radioButton1);
@@ -321,25 +326,12 @@
             this.checkdonl.Checked = true;
             this.checkdonl.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkdonl.Enabled = false;
-            this.checkdonl.Location = new System.Drawing.Point(391, 98);
+            this.checkdonl.Location = new System.Drawing.Point(391, 61);
             this.checkdonl.Name = "checkdonl";
             this.checkdonl.Size = new System.Drawing.Size(150, 17);
             this.checkdonl.TabIndex = 5;
             this.checkdonl.Text = "Очистка папки загрузок";
             this.checkdonl.UseVisualStyleBackColor = true;
-            // 
-            // checkcor
-            // 
-            this.checkcor.AutoSize = true;
-            this.checkcor.Checked = true;
-            this.checkcor.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkcor.Enabled = false;
-            this.checkcor.Location = new System.Drawing.Point(391, 61);
-            this.checkcor.Name = "checkcor";
-            this.checkcor.Size = new System.Drawing.Size(118, 17);
-            this.checkcor.TabIndex = 4;
-            this.checkcor.Text = "Очистка  корзины";
-            this.checkcor.UseVisualStyleBackColor = true;
             // 
             // checkTemp
             // 
@@ -997,6 +989,34 @@
             this.notifyIcon1.Text = "Cclearpro";
             this.notifyIcon1.Visible = true;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(32, 253);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(61, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(36, 233);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Аватарка";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.progressBar1.Location = new System.Drawing.Point(0, 274);
+            this.progressBar1.Maximum = 3;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(331, 23);
+            this.progressBar1.TabIndex = 9;
+            this.progressBar1.Value = 1;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1041,6 +1061,7 @@
             this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1065,7 +1086,6 @@
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.TabPage tabPage3;
         public System.Windows.Forms.CheckBox checkTemp;
-        public System.Windows.Forms.CheckBox checkcor;
         public System.Windows.Forms.CheckBox checkdonl;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox checkcloseself;
@@ -1123,5 +1143,8 @@
         private System.Windows.Forms.Button btdeletavto;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

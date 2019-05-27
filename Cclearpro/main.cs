@@ -219,7 +219,9 @@ namespace Cclearpro
 
             string[] namereg;
 
-            
+            //для загрузки аватарки
+
+            pictureBox3.Image = new Bitmap(Data.path);
         }
 
         //таймеры
@@ -306,6 +308,24 @@ namespace Cclearpro
 
                 if (checkTemp.Checked == true)
                 {
+                    Data.addclear++;
+                }
+
+                if (checkdonl.Checked == true)
+                {
+                    Data.addclear++;
+                }
+
+                if (checkclearhyckdow.Checked == true)
+                {
+                    Data.addclear++;
+                }
+
+                progressBar1.Maximum = Data.addclear;
+
+
+                if (checkTemp.Checked == true)
+                {
 
                     //Для очитски папок
 
@@ -348,21 +368,15 @@ namespace Cclearpro
                         }
                     }
 
+					//заметка
+					
+					//тут не то делано progressBar1
+					
                     listBox1.Items.Add("Очистка temp в папки завершина в файлы!");
                     listBox1.Items.Add("Ошибок при очистки temp в папки в файлы = " + Data.clearerrortempt);
                 }
 
-                if (checkcor.Checked == true)
-                {
-                    try
-                    {
-                        //SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlags.SHERB_NOSOUND | RecycleFlags.SHERB_NOCONFIRMATION);
-                    }
-                    catch
-                    {
 
-                    }
-                }
 
 
                 if (checkdonl.Checked == true)
@@ -404,9 +418,45 @@ namespace Cclearpro
 
     */
 
+                if (checkclearhyckdow.Checked == true)
+                {
+
+                    //для очистки пустых папок в докуметах
+
+                    //очистка папок
+
+                    string[] lol;
+
+                    lol = Directory.GetDirectories("C:\\Users\\\\Documents");
+
+                    foreach (string s in lol)
+                    {
+                        try
+                        {
+                            Directory.Delete(s, false);
+                        }
+                        catch (Exception ex)
+                        {
+                            Data.cleardownown = Data.cleardownown + 1;
+                            listBox1.Items.Add($"Ошибка в очистки документах в папки: {ex.Message}");
+                        }
+                    }
+
+                    listBox1.Items.Add("Очистка документах в папки завершина!");
+                    listBox1.Items.Add("Ошибок при очистки загрузок в папки = " + Data.cleardownown);
+                }
+                
                 Data.loggbak = 0;
 
                 MessageBox.Show("Завершено! Всего ошибок = " + (Data.clearerrortempt + Data.clearerrorcor + Data.clearerdown + Data.cleardownown), "Cclearpro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Data.clearerrortempt = 0;
+                Data.clearerrorcor = 0;
+                Data.clearerdown = 0;
+                Data.cleardownown = 0;
+                Data.addclear = 0;
+                progressBar1.Value = 0;
+
             }
             else if (radioButton2.Checked == true)
             {
@@ -418,26 +468,28 @@ namespace Cclearpro
             }
         }
 
+        public async void progessclear()
+        {
+
+        }
+
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
                 checkTemp.Enabled = true;
-                checkcor.Enabled = true;
                 checkdonl.Enabled = true;
                 checkclearhyckdow.Enabled = true;
             }
             else
             {
                 checkTemp.Enabled = false;
-                checkcor.Enabled = false;
                 checkdonl.Enabled = false;
                 checkclearhyckdow.Enabled = false;
             }
             if (radioButton1.Checked == true)
             {
                 checkTemp.Enabled = true;
-                checkcor.Enabled = true;
                 checkdonl.Enabled = true;
                 checkclearhyckdow.Enabled = true;
             }
@@ -449,14 +501,12 @@ namespace Cclearpro
             if (radioButton1.Checked == true)
             {
                 checkTemp.Enabled = true;
-                checkcor.Enabled = true;
                 checkdonl.Enabled = true;
                 checkclearhyckdow.Enabled = true;
             }
             else
             {
                 checkTemp.Enabled = false;
-                checkcor.Enabled = false;
                 checkdonl.Enabled = false;
                 checkclearhyckdow.Enabled = false;
             }
@@ -877,6 +927,7 @@ namespace Cclearpro
         {
             f3 = new AboutBox1();
             f3.Show();
+            //DirectoryHelp
         }
 
         //опять настройки :)
@@ -933,21 +984,18 @@ namespace Cclearpro
             if (radioButton1.Checked == true)
             {
                 checkTemp.Enabled = true;
-                checkcor.Enabled = true;
                 checkdonl.Enabled = true;
                 checkclearhyckdow.Enabled = true;
             }
             else
             {
                 checkTemp.Enabled = false;
-                checkcor.Enabled = false;
                 checkdonl.Enabled = false;
                 checkclearhyckdow.Enabled = false;
             }
             if (radioButton1.Checked == true)
             {
                 checkTemp.Enabled = true;
-                checkcor.Enabled = true;
                 checkdonl.Enabled = true;
                 checkclearhyckdow.Enabled = true;
             }
@@ -959,14 +1007,12 @@ namespace Cclearpro
             if (radioButton1.Checked == true)
             {
                 checkTemp.Enabled = true;
-                checkcor.Enabled = true;
                 checkdonl.Enabled = true;
                 checkclearhyckdow.Enabled = true;
             }
             else
             {
                 checkTemp.Enabled = false;
-                checkcor.Enabled = false;
                 checkdonl.Enabled = false;
                 checkclearhyckdow.Enabled = false;
             }

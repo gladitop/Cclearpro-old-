@@ -31,6 +31,7 @@ namespace Cclearpro
         public static int clearerdownadd = 0;//для просмотра сколько всего было ошибок
         public static int cleardownown = 0;//для просмотра сколько было ошибок при очистки в пустых папок в документов
         public static int cleardownownadd = 0;//для просмотра всех ошибок при очистки в пустых папок в документов
+        public static int addclear = 0;//для просмотра сколько надо очистить
 
         //выстовление системы
 
@@ -47,6 +48,10 @@ namespace Cclearpro
         public static int loggbak = 0;//исправлеет баг
         public static int lo = 0;//исправлеет баг
         public static bool checkicons = true;//для показа иконки которое в трее
+
+        //для аватарки
+
+       public static string path = "";//путь
 
         //Напинималки ;)
 

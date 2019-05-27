@@ -53,6 +53,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DirectoryHelp">
+      <HintPath>..\..\DirectoryHelp\DirectoryHelp\obj\Debug\DirectoryHelp.dll</HintPath>
+    </Reference>
     <Reference Include="ProcessKiller, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\source\repos\ProcessKiller\ProcessKiller\obj\Debug\ProcessKiller.dll</HintPath>

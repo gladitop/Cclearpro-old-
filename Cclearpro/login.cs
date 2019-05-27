@@ -21,6 +21,8 @@ namespace Cclearpro
         login f1;// 1 форма то есть авторизация
         AboutBox1 f3;//3 форма то есть о программе.
 
+        //для автарки
+
         public login()
         {
             InitializeComponent();
@@ -280,6 +282,34 @@ namespace Cclearpro
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Чё надо!?", "А Б В Г Д!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        //Для аватарки
+
+        //открытие
+
+        private void btopenpicter_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opr = new OpenFileDialog();
+
+            if (opr.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                   pictureBox3.Image = new Bitmap(opr.FileName);
+                    Data.path = opr.FileName;
+                }
+                catch
+                {
+                    
+                    DialogResult lol = MessageBox.Show("Ошибка", "Cclearpro", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    if (lol == DialogResult.Retry)
+                    {
+                        btopenpicter_Click(btopenpicter, null);
+                        //btopenpicter.PerformClick();
+                    }
+                }
+            }
         }
     }
 }
